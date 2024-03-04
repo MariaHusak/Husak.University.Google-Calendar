@@ -6,7 +6,7 @@ husakmaria74@gmail.com
 
 https://t.me/@gusakmary
 ## Getting Started
-Getting Started with Local Setup for Google Calendar
+#### Getting Started with Local Setup for Google Calendar
 Welcome to Google Calendar! This guide will walk you through the process of setting up Google Calendar locally on your computer.
 
 Prerequisites
