@@ -5,8 +5,6 @@ Mariia Husak FEP-21
 husakmaria74@gmail.com
 
 https://t.me/@gusakmary
-## Getting Started
-
 ## Project Documentation
 
 ## Project Task Decomposition
