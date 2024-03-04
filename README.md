@@ -13,21 +13,32 @@ Prerequisites
 Before you begin, ensure you have the following:
 
 A Google account
+
 A computer with internet access
+
 A web browser (Google Chrome, Mozilla Firefox, Safari, etc.)
+
 Steps to Setup Google Calendar Locally
+
 Step 1: Sign in to Google Account
+
 Open your preferred web browser.
 Go to Google Calendar.
 Sign in with your Google account credentials (email and password).
+
 Step 2: Access Calendar Settings
+
 Once logged in, click on the gear icon located in the top right corner of the screen.
 From the dropdown menu, select "Settings".
+
 Step 3: Configure Calendar Settings
+
 In the Settings page, navigate to the "General" tab.
 Adjust settings such as time zone, working hours, and default event duration according to your preferences.
 Click on the "Save" button to apply the changes.
+
 Step 4: Explore Calendar Features
+
 Familiarize yourself with the various features of Google Calendar, including creating events, setting reminders, and sharing calendars.
 Navigate through the different views (day, week, month, etc.) to understand how your schedule will appear.
 ## Project Documentation
