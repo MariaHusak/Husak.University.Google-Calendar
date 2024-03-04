@@ -6,41 +6,35 @@ husakmaria74@gmail.com
 
 https://t.me/@gusakmary
 ## Getting Started
-#### Getting Started with Local Setup for Google Calendar
+### Getting Started with Local Setup for Google Calendar
 Welcome to Google Calendar! This guide will walk you through the process of setting up Google Calendar locally on your computer.
-
-Prerequisites
+#### Prerequisites
 Before you begin, ensure you have the following:
+- A Google account
+- A computer with internet access
+- A web browser (Google Chrome, Mozilla Firefox, Safari, etc.)
+#### Steps to Setup Google Calendar Locally
+##### Step 1: Sign in to Google Account
 
-A Google account
+1. Open your preferred web browser.
+2. Go to Google Calendar.
+3. Sign in with your Google account credentials (email and password).
+   
+##### Step 2: Access Calendar Settings
 
-A computer with internet access
+1. Once logged in, click on the gear icon located in the top right corner of the screen.
+2. From the dropdown menu, select "Settings".
 
-A web browser (Google Chrome, Mozilla Firefox, Safari, etc.)
+##### Step 3: Configure Calendar Settings
 
-Steps to Setup Google Calendar Locally
+1. In the Settings page, navigate to the "General" tab.
+2. Adjust settings such as time zone, working hours, and default event duration according to your preferences.
+3. Click on the "Save" button to apply the changes.
 
-Step 1: Sign in to Google Account
+##### Step 4: Explore Calendar Features
 
-Open your preferred web browser.
-Go to Google Calendar.
-Sign in with your Google account credentials (email and password).
-
-Step 2: Access Calendar Settings
-
-Once logged in, click on the gear icon located in the top right corner of the screen.
-From the dropdown menu, select "Settings".
-
-Step 3: Configure Calendar Settings
-
-In the Settings page, navigate to the "General" tab.
-Adjust settings such as time zone, working hours, and default event duration according to your preferences.
-Click on the "Save" button to apply the changes.
-
-Step 4: Explore Calendar Features
-
-Familiarize yourself with the various features of Google Calendar, including creating events, setting reminders, and sharing calendars.
-Navigate through the different views (day, week, month, etc.) to understand how your schedule will appear.
+1. Familiarize yourself with the various features of Google Calendar, including creating events, setting reminders, and sharing calendars.
+2. Navigate through the different views (day, week, month, etc.) to understand how your schedule will appear.
 ## Project Documentation
 
 ## Project Task Decomposition
