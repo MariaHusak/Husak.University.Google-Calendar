@@ -1,0 +1,27 @@
+{% extends 'main/general.html' %}
+
+{% block title %} Monthly Calendar {% endblock %}
+
+{% block maincontent %}
+    <h2>{{ month_name }} {{ year_name }}</h2>
+    <table border="1">
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        {% for week in calendar %}
+        <tr>
+            {% for day in week %}
+            <td>{{ day }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/calendar/{{ prev_month }}">Previous Month</a>
+    <a href="/calendar/{{ next_month }}">Next Month</a>
+{% endblock %}
