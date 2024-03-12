@@ -46,7 +46,7 @@ Before you begin, ensure you have the following:
 - Write Getting Started documentation for local setup ✔️
 
 ### Week 2:
-- Implement feature: Calendar View with Monthly Layout
+- Implement feature: Calendar View with Monthly Layout ✔️
 - Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline
 - Write Project Documentation: Architecture Diagram
 - Write Unit Tests for User Authentication
