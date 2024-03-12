@@ -46,14 +46,14 @@ Before you begin, ensure you have the following:
 - Write Getting Started documentation for local setup ✔️
 
 ### Week 2:
-- Implement feature: Event Creation functionality
+- Implement feature: Calendar View with Monthly Layout
 - Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline
 - Write Project Documentation: Architecture Diagram
 - Write Unit Tests for User Authentication
 - Create Postman collection for testing OAuth endpoints
 
 ### Week 3:
-- Implement feature: Calendar View with Monthly Layout
+- Implement feature: Event Creation functionality
 - Configure Azure deployment settings
 - Write Project Documentation: Infrastructure Diagram
 - Write Unit Tests for Event Creation functionality
