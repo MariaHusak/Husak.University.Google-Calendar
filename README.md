@@ -53,7 +53,7 @@ https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitatio
 
 ### Week 2:
 - Implement feature: Calendar View with Monthly Layout ✔️
-- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline
+- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline ✔️
 - Write Project Documentation: Architecture Diagram ✔️
 - Write Unit Tests for User Authentication
 - Create Postman collection for testing OAuth endpoints
