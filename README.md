@@ -36,6 +36,11 @@ Before you begin, ensure you have the following:
 1. Familiarize yourself with the various features of Google Calendar, including creating events, setting reminders, and sharing calendars.
 2. Navigate through the different views (day, week, month, etc.) to understand how your schedule will appear.
 ## Project Documentation
+### Introduction
+Welcome to the documentation for project, a comprehensive and user-friendly calendar application built on the Django framework. This documentation serves as a guide for developers, testers providing insights into its architecture, features, deployment process, and more.
+### Architecture Diagram 
+You can see the architecture diagram here:
+https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitationId=inv_75e9b6ef-4c50-456e-846e-496b8b10d010&page=0_0#
 
 ## Project Task Decomposition
 ### Week 1:
