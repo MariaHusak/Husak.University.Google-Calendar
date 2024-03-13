@@ -46,7 +46,7 @@ https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitatio
 ## Project Task Decomposition
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
-- Set up Azure deployment environment
+- Set up Azure deployment environment ✔️
 - Create project structure on GitHub repository ✔️
 - Define initial project architecture
 - Write Getting Started documentation for local setup ✔️
