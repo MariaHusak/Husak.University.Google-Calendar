@@ -5,7 +5,7 @@
     {% endblock %}
 
 {% block title %} Google-Calendar {% endblock %}
-
+{% load socialaccount %}
 {% block maincontent %}
     <div>
         <a href="{% url 'home' %}" class="button"><h1>Home</h1></a>
@@ -13,8 +13,8 @@
         <a href="{% url 'privacy' %}" class="button"><h1>Privacy</h1></a>
         <a href="{% url 'calendar' %}" class="button"><h1>Calendar</h1></a>
 
-        <a href="" class="button" class="button1"><h1>Log in</h1></a>
-        <a href="" class="button" class="button1"><h1>Sign up</h1></a>
+        <a href="login" class="button" class="button1"><h1>Sign in</h1></a>
+        <a href="{% provider_login_url 'google' %}" class="button" class="button1"><h1>Sign in with Google</h1></a>
     </div>
     <div>
         <h2>Google-Calendar</h2>

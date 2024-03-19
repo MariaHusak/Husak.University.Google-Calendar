@@ -11,25 +11,7 @@
 </head>
 <body>
     {% block maincontent %}
-        <h1>Calendar</h1>
-    <table border="1">
-        <tr>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-        </tr>
-        {% for week in calendar %}
-        <tr>
-            {% for day in week %}
-            <td>{{ day }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
+
     {% endblock %}
 </body>
 </html>
