@@ -8,6 +8,9 @@ def index(request):
 def privacy(request):
     return render(request, 'main/privacy.html')
 
+def login(request):
+    return render(request, 'account/login.html')
+
 
 def display_calendar(request, year=None, month=None):
     today = datetime.today()

@@ -59,7 +59,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2563ad2c03454b0c7d82397d4adea14abf4aa977
 ]
 
 ROOT_URLCONF = 'mycalendar.urls'
@@ -67,7 +70,7 @@ ROOT_URLCONF = 'mycalendar.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,6 +82,11 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+
+    'allauth.account.auth_backends.AuthenticationBackend'
+    ]
 
 WSGI_APPLICATION = 'mycalendar.wsgi.application'
 
@@ -141,6 +149,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SITE_ID = 2
+
+LOGIN_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
 
 STATICFILES_DIRS = [
     BASE_DIR / "main",

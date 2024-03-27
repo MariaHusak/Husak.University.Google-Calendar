@@ -10,9 +10,24 @@
     {% block css %} {% endblock css%}
 </head>
 <body>
+<<<<<<< HEAD
     {% load socialaccount %}
     {% block maincontent %}
 
     {% endblock maincontent%}
+=======
+    <div>
+        {% load socialaccount %}
+        <a href="{% url 'home' %}" class="button"><h1>Home</h1></a>
+        <a href="{% url 'privacy' %}" class="button"><h1>Privacy</h1></a>
+        <a href="{% url 'calendar' %}" class="button"><h1>Calendar</h1></a>
+
+        <a href="login" class="button" ><h1>Sign in</h1></a>
+        <a href="{% provider_login_url 'google' %}" class="button" ><h1>Sign in with Google</h1></a>
+    </div>
+    {% block maincontent %}
+
+    {% endblock %}
+>>>>>>> 2563ad2c03454b0c7d82397d4adea14abf4aa977
 </body>
 </html>

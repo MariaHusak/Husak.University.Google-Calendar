@@ -1,10 +1,15 @@
 {% extends 'main/general.html' %}
 
 {% block title %} Monthly Calendar {% endblock %}
+{% block css %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/main/calendarstyles.css' %}">
+    {% endblock %}
 
 {% block maincontent %}
+<div class="main">
     <h2>{{ month_name }} {{ year_name }}</h2>
-    <table border="1">
+    <table class="cal" border="0">
         <tr>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -22,6 +27,13 @@
         </tr>
         {% endfor %}
     </table>
+<<<<<<< HEAD
     <a href="/calendar/{{ prev_month }}">Previous Month</a>
     <a href="/calendar/{{ next_month }}">Next Month</a>
 {% endblock maincontent%}
+=======
+    <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
+    <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
+</div>
+{% endblock %}
+>>>>>>> 2563ad2c03454b0c7d82397d4adea14abf4aa977
