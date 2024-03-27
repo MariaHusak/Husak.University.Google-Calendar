@@ -42,6 +42,11 @@ Welcome to the documentation for project, a comprehensive and user-friendly cale
 You can see the architecture diagram here:
 
 https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitationId=inv_75e9b6ef-4c50-456e-846e-496b8b10d010&page=0_0#
+### Infrastructure Diagram
+You can see the infrastructure diagram here:
+
+https://miro.com/app/board/uXjVKb2V8W0=/
+
 ### Azure deployment process
 ##### 1. Prepare Django Application
 Ensure that your Django application is properly configured and works correctly on your local development machine. Make sure all dependencies are listed in requirements.txt or Pipfile, and your application can run using python manage.py runserver without any errors.
