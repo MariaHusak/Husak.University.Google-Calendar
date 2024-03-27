@@ -101,7 +101,7 @@ Monitor your application's performance and resource usage on Azure. Use Azure's 
 ### Week 4:
 - Implement feature: Reminder Notifications via Email
 - Implement automated deployment using CI/CD pipeline
-- Write Project Tasks Decomposition
+- Write Project Tasks Decomposition ✔️
 - Write Unit Tests for Reminder Notifications
 - Create Postman collection for testing Reminder endpoints
 
