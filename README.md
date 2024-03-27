@@ -55,14 +55,14 @@ https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitatio
 - Implement feature: Calendar View with Monthly Layout ✔️
 - Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline ✔️
 - Write Project Documentation: Architecture Diagram ✔️
-- Write Unit Tests for User Authentication
+- Write Unit Tests for User Authentication ✔️
 - Create Postman collection for testing OAuth endpoints
 
 ### Week 3:
-- Implement feature: Event Creation functionality
+- Implement feature: Event Creation functionality ✔️
 - Configure Azure deployment settings
 - Write Project Documentation: Infrastructure Diagram
-- Write Unit Tests for Event Creation functionality
+- Write Unit Tests for Event Creation functionality ✔️
 - Write documentation for Azure deployment process
 
 ### Week 4:
