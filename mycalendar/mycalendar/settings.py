@@ -68,6 +68,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
@@ -83,6 +85,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
+SITE_ID = 1
+SOCIALACCOUNT_LOGIN_ON_GET=True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -92,6 +97,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2563ad2c03454b0c7d82397d4adea14abf4aa977
 ]
 
 ROOT_URLCONF = 'mycalendar.urls'
@@ -147,6 +156,20 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
+=======
+"""DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'testdb',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': '45.76.42.234',
+        'PORT': '5432',
+    }
+}"""
+
+>>>>>>> c866bedd027a8b198e4b9fa23c720384c52c2676
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -175,6 +198,8 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
@@ -202,6 +227,23 @@ SOCIALACCOUNT_PROVIDERS = {
 STATICFILES_DIRS = [
     BASE_DIR / "main",
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'allauth.account.auth_backends.AuthenticationBackend'
+    ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

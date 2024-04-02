@@ -44,6 +44,11 @@
 {% endfor %}
 
     </table>
+<<<<<<< HEAD
+    <a href="/calendar/{{ prev_month }}">Previous Month</a>
+    <a href="/calendar/{{ next_month }}">Next Month</a>
+{% endblock maincontent%}
+=======
     <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
     <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
 
@@ -66,11 +71,6 @@
         <button type="submit">Create Event</button>
     </form>
 
-
-
-
-</div>
-{% endblock %}
 
 {% block scripts %}
 <script>
@@ -99,3 +99,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 {% endblock %}
+
+
+</div>
+{% endblock %}
+
+
