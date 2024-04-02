@@ -201,7 +201,7 @@ Monitoring: Prometheus, Grafana
 - Implement feature: Invite Attendees to Events ✔️
 - Optimize Azure deployment for performance
 - Write documentation for CI/CD process ✔️
-- Write Unit Tests for Invite Attendees functionality
+- Write Unit Tests for Invite Attendees functionality ✔️
 - Conduct unit testing for OAuth endpoints
 
 ### Week 6:
