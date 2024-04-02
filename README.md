@@ -111,7 +111,7 @@ Monitor your application's performance and resource usage on Azure. Use Azure's 
 - Create Postman collection for testing Reminder endpoints
 
 ### Week 5:
-- Implement feature: Invite Attendees to Events
+- Implement feature: Invite Attendees to Events ✔️
 - Optimize Azure deployment for performance
 - Write documentation for CI/CD process
 - Write Unit Tests for Invite Attendees functionality
