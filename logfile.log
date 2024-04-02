@@ -1,0 +1,1283 @@
+D:\пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: event_date=None, start_time=None, end_time=None, creator=ktrl
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\Husak.University.Google-Calendar\mycalendar\main\views.py", line 125, in create_event
+    parsed_event_date = parse_date(event_date)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\dateparse.py", line 74, in parse_date
+    return datetime.date.fromisoformat(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: fromisoformat: argument must be str
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: event_date=2024-03-28, start_time=13:51, end_time=14:51, creator=ktrl
+Created event:
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: event_date=2024-04-01, start_time=12:56, end_time=14:58, creator=ktrl
+Created event:
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: event_date=2024-04-07, start_time=10:30, end_time=11:00, creator=ktrl
+Created event:
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: title=My event, date=2024-04-04, start_time=16:10, end_time=17:00, location=Home, description=blajknjkjkl, creator=ktrl
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 136, in create_event
+    event = Event.objects.create(title=event_title, date=parsed_event_date, start_time=start_time,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Event() got unexpected keyword arguments: 'location', 'description'
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+Entering create_event view function
+Received data: title=My event, date=2024-04-04, start_time=16:10, end_time=17:00, location=Home, description=blajknjkjkl, creator=ktrl
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table main_event has no column named location
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 136, in create_event
+    event = Event.objects.create(title=event_title, date=parsed_event_date, start_time=start_time,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table main_event has no column named location
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Internal Server Error: /calendar
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: main_event.location
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 51, in display_calendar
+    logger.debug(f"Retrieved events: {events}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 376, in __repr__
+    data = list(self[: REPR_OUTPUT_SIZE + 1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: main_event.location
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Internal Server Error: /calendar
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: main_event.location
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 51, in display_calendar
+    logger.debug(f"Retrieved events: {events}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 376, in __repr__
+    data = list(self[: REPR_OUTPUT_SIZE + 1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: main_event.location
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Internal Server Error: /calendar
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: main_event.location
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 51, in display_calendar
+    logger.debug(f"Retrieved events: {events}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 376, in __repr__
+    data = list(self[: REPR_OUTPUT_SIZE + 1])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: main_event.location
+Watching for file changes with StatReloader
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 1, 2, 3, 4], [5, 6, 7, 8, 9, 10, 11], [12, 13, 14, 15, 16, 17, 18], [19, 20, 21, 22, 23, 24, 25], [26, 27, 28, 29, 0, 0, 0]]
+Next month: 2024/03, Previous month: 2024/02
+Retrieved events: <QuerySet []>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >]>
+Entering create_event view function
+Received data: title=My event, date=2024-04-06, start_time=16:30, end_time=17:05, location=Home, description=bhjhjkhjlk;k, creator=ktrl
+Created event: My event
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>]>
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering create_event view function
+Received data: title=My event 1, date=2024-04-25, start_time=16:40, end_time=17:00, location=Home, description=srfilyyrfhgbiu767867i, creator=ktrl
+Created event: My event 1
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 11, 12], [13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26], [27, 28, 29, 30, 31, 0, 0]]
+Next month: 2024/06, Previous month: 2024/05
+Retrieved events: <QuerySet []>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Watching for file changes with StatReloader
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 11, 12], [13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26], [27, 28, 29, 30, 31, 0, 0]]
+Next month: 2024/06, Previous month: 2024/05
+Retrieved events: <QuerySet []>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 1, 2, 3, 4], [5, 6, 7, 8, 9, 10, 11], [12, 13, 14, 15, 16, 17, 18], [19, 20, 21, 22, 23, 24, 25], [26, 27, 28, 29, 0, 0, 0]]
+Next month: 2024/03, Previous month: 2024/02
+Retrieved events: <QuerySet []>
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/04
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Not Found: /favicon.ico
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Entering display_calendar view function
+Calendar data retrieved: [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
+Next month: 2024/04, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: >, <Event: >, <Event: >, <Event: >]>
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Internal Server Error: /accounts/signup/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\views.py", line 255, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\views.py", line 95, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\views.py", line 227, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\views.py", line 123, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\views.py", line 273, in form_valid
+    return complete_signup(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\utils.py", line 241, in complete_signup
+    return perform_login(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\utils.py", line 166, in perform_login
+    return _perform_login(request, login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\utils.py", line 176, in _perform_login
+    response = adapter.pre_login(request, login.user, **hook_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\adapter.py", line 461, in pre_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\utils.py", line 399, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\models.py", line 93, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\models.py", line 126, in send
+    get_adapter().send_confirmation_mail(request, self, signup)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\adapter.py", line 641, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\allauth\account\adapter.py", line 186, in send_mail
+    msg.send()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials p6-20020a2e9ac6000000b002d6b26db69esm1425189ljj.0 - gsmtp')
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>]>
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=21:30, end_time=22:30, location=Home, description=kmkmkmk, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials bp3-20020a056512158300b00515cd52ff6csm1208543lfb.50 - gsmtp')
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=21:30, end_time=22:30, location=Home, description=kmkmkmk, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials c5-20020ac25f65000000b00513e258039asm1456093lfc.190 - gsmtp')
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\mycalendar\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=21:30, end_time=22:30, location=Home, description=kmkmkmk, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials k12-20020a192d0c000000b00513e911446esm1466272lfj.145 - gsmtp')
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>, <Event: Work>, <Event: Work>, <Event: Work>]>
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=20:45, end_time=21:30, location=Home, description=hgyjgiughuh, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials bi15-20020a0565120e8f00b005159412ab81sm1454674lfb.216 - gsmtp')
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>, <Event: Work>, <Event: Work>, <Event: Work>, <Event: Work>]>
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>, <Event: Work>, <Event: Work>, <Event: Work>, <Event: Work>]>
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=22:00, location=Home, description=bhbjkhoyi, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials l10-20020ac2430a000000b00516a234ca0dsm595923lfh.192 - gsmtp')
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\mycalendar\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=22:00, location=Home, description=bhbjkhoyi, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials f16-20020a05651c03d000b002d6c051d299sm1462174ljp.56 - gsmtp')
+Entering display_calendar view function
+Calendar data retrieved: [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 0, 0, 0, 0, 0]]
+Next month: 2024/05, Previous month: 2024/03
+Retrieved events: <QuerySet [<Event: >, <Event: >, <Event: My event>, <Event: My event 1>, <Event: Work>, <Event: Work>, <Event: Work>, <Event: Work>, <Event: Work>, <Event: Work>]>
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=21:00, location=Home, description=jhuhukjkj, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials k3-20020a05651210c300b00515c9605ea6sm1405981lfg.221 - gsmtp')
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\mycalendar\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\mycalendar\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=21:00, location=Home, description=jhuhukjkj, creator=ktrl
+Created event: Work
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 143, in create_event
+    send_mail(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\__init__.py", line 88, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials k36-20020a0565123da400b00516a12a926bsm623048lfv.7 - gsmtp')
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\mycalendar\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=21:00, location=Home, description=jhuhukjkj, creator=ktrl
+Created event: Work
+Entering create_event view function
+Received data: title=Work, date=2024-04-10, start_time=19:00, end_time=21:00, location=Home, description=jhuhukjkj, creator=ktrl
+Created event: Work
+Invitation email sent to mariia.husak@lnu.edu.ua
+Invitation email sent to mariia.husak@lnu.edu.ua
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /calendar
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: main_event.event_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 53, in display_calendar
+    for event in events:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: main_event.event_type
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /calendar
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: main_event.event_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 53, in display_calendar
+    for event in events:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: main_event.event_type
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /create_event/
+Bad Request: /create_event/
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /create_event/
+Bad Request: /create_event/
+Bad Request: /create_event/
+Bad Request: /create_event/
+Bad Request: /create_event/
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: main_event.event_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 83, in create_event
+    event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: main_event.event_type
+Internal Server Error: /create_event/
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: main_event.event_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Нова папка\Husak.University.Google-Calendar\mycalendar\main\views.py", line 83, in create_event
+    event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mariia\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: main_event.event_type
+Watching for file changes with StatReloader

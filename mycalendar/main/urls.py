@@ -6,5 +6,7 @@ urlpatterns = [
     path('privacy', views.privacy, name='privacy'),
     path('login', views.login, name='login'),
     path('calendar', views.display_calendar, name='calendar'),
-    path('calendar/<int:year>/<int:month>/', views.display_calendar, name='calendar_with_params')
+    path('calendar/<int:year>/<int:month>/', views.display_calendar, name='calendar_with_params'),
+    path('create_event/', views.create_event, name='create_event'),
+    #path('send_email_notification/', views.send_email_notification, name='send_email_notification'),
 ]

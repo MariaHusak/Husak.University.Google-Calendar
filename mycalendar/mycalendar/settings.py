@@ -25,6 +25,44 @@ SECRET_KEY = 'django-insecure-#^a095n96qp0demcyty4*=57!p5owx#1s8+dy+ix5yi05#er16
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+import logging
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logfile.log',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'husakmaria74@gmail.com'
+EMAIL_HOST_PASSWORD = 'gzns kvwo aglb hkhk'
+DEFAULT_FROM_EMAIL = 'husakmaria74@gmail.com'
+
+
+
+
 ALLOWED_HOSTS = []
 
 
@@ -85,13 +123,29 @@ WSGI_APPLICATION = 'mycalendar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+"""DATABASES = {
+    'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'mycalendar',
+        'USER': 'mariia.husak@lnu.edu.ua',
+        'PASSWORD': '',
+        'HOST': 'mycalendar.database.windows.net',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'Authentication': 'ActiveDirectoryInteractive',
+        },
+    }
+}
+"""
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

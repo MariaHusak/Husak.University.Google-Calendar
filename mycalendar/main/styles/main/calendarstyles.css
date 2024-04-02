@@ -58,4 +58,61 @@ h2
   margin: 4px 300px;
 }
 
+/* Styles for the event creation form */
+#event-form {
+    margin-bottom: 20px;
+}
+
+#event-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#event-form input[type="date"],
+#event-form input[type="time"],
+#event-form button {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#event-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#event-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the event list */
+.events-list {
+    margin-top: 20px;
+}
+
+.events-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.events-list li:last-child {
+    margin-bottom: 0;
+}
+
+.events-list li::before {
+    content: "\2022"; /* Bullet point */
+    color: #007bff; /* Bullet point color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.events-list li.no-events {
+    color: #999; /* Color for "No events found" message */
+}
+
 
