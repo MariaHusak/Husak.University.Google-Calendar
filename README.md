@@ -82,7 +82,7 @@ Once deployed, thoroughly test your Django application on Azure to ensure everyt
 Monitor your application's performance and resource usage on Azure. Use Azure's monitoring tools to identify and address any issues promptly. Regularly update your application and dependencies to keep it secure and up-to-date.
 
 ### Continuous Integration/Continuous Deployment (CI/CD) Process Documentation
-##### Introduction:
+#### Introduction:
 Continuous Integration/Continuous Deployment (CI/CD) is a software development practice aimed at delivering code changes more frequently and reliably. It involves automating the process of integrating code changes into a shared repository (Continuous Integration) and deploying applications to production environments automatically (Continuous Deployment). This documentation outlines the CI/CD process implemented within our organization.
 
 #### 1. Purpose:
@@ -122,30 +122,50 @@ Pull requests are created for code changes, and peer reviews are conducted to en
 ##### Continuous Integration (CI):
 
 Trigger: Whenever a pull request is merged into the main branch or when changes are pushed to feature branches.
+
 Actions:
+
+
 Automated build: The code is compiled and built into executable artifacts.
+
 Automated tests: Unit tests, integration tests, and other types of tests are executed to verify the correctness of the code changes.
+
 Static code analysis: Tools such as linters and code quality analyzers are used to check for coding standards and potential issues.
+
 Code coverage analysis: Assess the percentage of code covered by automated tests.
+
 Notifications: Notify developers of the CI pipeline status (success or failure) via messaging platforms or email.
 
 ##### Continuous Deployment (CD):
 
 Trigger: After successful completion of the CI stage.
+
 Actions:
+
+
 Artifact deployment: Deploy the built artifacts to staging environments for further testing.
+
 Automated acceptance testing: Execute automated tests in the staging environment to ensure that the application behaves as expected.
+
 Manual testing (optional): If necessary, perform manual testing in the staging environment.
+
 Deployment to production: Upon successful testing in the staging environment, automatically deploy the changes to production environments.
+
 Notifications: Notify stakeholders of deployment status and any issues encountered during the deployment process.
+
 #### 5. Tools and Technologies:
 The following tools and technologies are commonly used in our CI/CD process:
 
 Version Control: Git
+
 CI/CD Pipeline: Jenkins, GitLab CI/CD, Travis CI
+
 Automated Testing: JUnit, Selenium, Jest, pytest
+
 Artifact Repository: Nexus, Artifactory
+
 Deployment Tools: Ansible, Docker, Kubernetes
+
 Monitoring: Prometheus, Grafana
 
 ## Project Task Decomposition
