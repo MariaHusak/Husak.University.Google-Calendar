@@ -202,7 +202,7 @@ Monitoring: Prometheus, Grafana
 - Optimize Azure deployment for performance
 - Write documentation for CI/CD process ✔️
 - Write Unit Tests for Invite Attendees functionality ✔️
-- Conduct unit testing for OAuth endpoints
+- Conduct unit testing for OAuth endpoints ✔️
 
 ### Week 6:
 - Implement feature: Recurring Events
