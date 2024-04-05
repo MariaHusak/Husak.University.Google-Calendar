@@ -173,7 +173,7 @@ Monitoring: Prometheus, Grafana
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
 - Set up Azure deployment environment ✔️
 - Create project structure on GitHub repository ✔️
-- Define initial project architecture
+- Define initial project architecture ✔️
 - Write Getting Started documentation for local setup ✔️
 
 ### Week 2:
