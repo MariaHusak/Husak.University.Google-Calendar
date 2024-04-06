@@ -4,7 +4,7 @@ from django.utils import timezone
 
 from datetime import datetime
 
-from mycalendar.main.models import Event
+from main.models import Event
 
 class Command(BaseCommand):
     help = 'Send reminders for upcoming events'
