@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reminder</title>
+</head>
+<body>
+    <h1>Event Reminder</h1>
+    <p>Dear participant,</p>
+
+    <p>This is a reminder for the upcoming event "{{ event.title }}" scheduled for {{ event.date }} at {{ event.start_time }}.</p>
+
+    <p>Location: {{ event.location }}</p>
+    <p>Description: {{ event.description }}</p>
+
+    <p>Best regards,</p>
+    <p>Your Calendar</p>
+</body>
+</html>

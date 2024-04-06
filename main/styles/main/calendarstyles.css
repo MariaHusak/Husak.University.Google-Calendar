@@ -1,0 +1,119 @@
+body
+{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+
+    background-image: url("");
+    background-repeat: no-repeat;
+}
+
+.button
+{
+    background-color: none;
+    border: none;
+    color: grey;
+    border: 2px solid #e7e7e7;
+    padding: 4px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 6px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+h2
+{
+    text-align: center;
+}
+
+.button1 {
+  background-color: none;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 10px;
+  margin: 4px 300px;
+}
+
+/* Styles for the event creation form */
+#event-form {
+    margin-bottom: 20px;
+}
+
+#event-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#event-form input[type="date"],
+#event-form input[type="time"],
+#event-form button {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+
+#event-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#event-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the event list */
+.events-list {
+    margin-top: 20px;
+}
+
+.events-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.events-list li:last-child {
+    margin-bottom: 0;
+}
+
+.events-list li::before {
+    content: "\2022"; /* Bullet point */
+    color: #007bff; /* Bullet point color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.events-list li.no-events {
+    color: #999; /* Color for "No events found" message */
+}
+
+
