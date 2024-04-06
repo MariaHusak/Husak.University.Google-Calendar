@@ -1287,3 +1287,8 @@ Traceback (most recent call last):
 django.db.utils.IntegrityError: NOT NULL constraint failed: main_event.event_type
 Watching for file changes with StatReloader
 >>>>>>> d7aa1770d12588ae196b14a2deaf4bc9f3f5047a
+Watching for file changes with StatReloader
+Not Found: /calendar/2024/06
+Not Found: /calendar/2024/03
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
