@@ -1,0 +1,107 @@
+{% extends 'main/general.html' %}
+
+{% block title %} Monthly Calendar {% endblock %}
+{% block css %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/main/calendarstyles.css' %}">
+    {% endblock %}
+
+{% block maincontent %}
+<div class="main">
+    <h2>{{ month_name }} {{ year_name }}</h2>
+    <table class="cal" border="0">
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+    {% for week in calendar %}
+    <tr>
+    {% for day in week %}
+    <td>
+        {{ day }}
+      <ul>
+            {% for event in events %}
+                {% if event.date.day == day %}
+                    <li>
+                        <strong>Title:</strong> {{ event.title }}<br>
+                        <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}
+                        <strong>Location:</strong> {{ event.location }}<br>
+                        <strong>Description:</strong> {{ event.description }}<br>
+                        <strong>Creator:</strong> {{ event.creator_nickname }}<br>
+                        <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+
+    </table>
+<<<<<<< HEAD
+    <a href="/calendar/{{ prev_month }}">Previous Month</a>
+    <a href="/calendar/{{ next_month }}">Next Month</a>
+{% endblock maincontent%}
+=======
+    <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
+    <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
+
+    <form id="event-form">
+        {% csrf_token %}
+        <label for="event_title">Title:</label>
+        <input type="text" id="event_title" name="event_title"><br>
+        <label for="event_date">Date:</label>
+        <input type="date" id="event_date" name="event_date"><br>
+        <label for="start_time">Start Time:</label>
+        <input type="time" id="start_time" name="start_time"><br>
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time"><br>
+        <label for="event_location">Location:</label>
+        <input type="text" id="event_location" name="event_location"><br>
+        <label for="event_description">Description:</label>
+        <textarea id="event_description" name="event_description"></textarea><br>
+        <label for="invited_emails">Invite others (comma-separated email addresses):</label>
+        <input type="text" id="invited_emails" name="invited_emails"><br>
+        <button type="submit">Create Event</button>
+    </form>
+
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("event-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var formData = new FormData(this);
+        fetch('/create_event/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Event created successfully
+                alert("Event created successfully!");
+            } else {
+                // Error occurred
+                alert("Failed to create event. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An unexpected error occurred.");
+        });
+    });
+});
+</script>
+{% endblock %}
+
+
+</div>
+{% endblock %}
+
+
