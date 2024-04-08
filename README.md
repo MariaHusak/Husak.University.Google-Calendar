@@ -194,7 +194,7 @@ Monitoring: Prometheus, Grafana
 - Implement feature: Reminder Notifications via Email  ✔️
 - Implement automated deployment using CI/CD pipeline
 - Write Project Tasks Decomposition ✔️
-- Write Unit Tests for Reminder Notifications
+- Write Unit Tests for Reminder Notifications ✔️
 - Create Postman collection for testing Reminder endpoints
 
 ### Week 5:
