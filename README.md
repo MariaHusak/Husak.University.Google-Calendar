@@ -191,7 +191,7 @@ Monitoring: Prometheus, Grafana
 - Write documentation for Azure deployment process ✔️
 
 ### Week 4:
-- Implement feature: Reminder Notifications via Email
+- Implement feature: Reminder Notifications via Email  ✔️
 - Implement automated deployment using CI/CD pipeline
 - Write Project Tasks Decomposition ✔️
 - Write Unit Tests for Reminder Notifications
