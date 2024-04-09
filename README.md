@@ -168,6 +168,37 @@ Deployment Tools: Ansible, Docker, Kubernetes
 
 Monitoring: Prometheus, Grafana
 
+### Feedback
+We value your feedback and strive to continuously improve Google Calendar. If you have any suggestions, feature requests, or bug reports, please don't hesitate to reach out to us. Your input helps us make Google Calendar better for everyone.
+
+#### How to Provide Feedback
+There are several ways you can provide feedback:
+
+##### 1. GitHub Issues:
+Submit an issue on GitHub with a clear description of your feedback. Whether it's a bug you encountered, a feature you'd like to see, or a suggestion for improvement, we appreciate hearing from you.
+
+##### 2. Feature Requests:
+If there's a feature you'd like to see added to Google Calendar, please let us know! Describe the feature in detail and explain how it would benefit you and other users.
+
+##### 3. Bug Reports: 
+Encountered a bug while using Google Calendar? Please report it so we can investigate and fix it promptly. Be sure to include steps to reproduce the bug and any error messages you encountered.
+
+##### 4. General Suggestions: 
+Have a general suggestion for improving Google Calendar? We're all ears! Whether it's usability improvements, design enhancements, or performance optimizations, your ideas are valuable to us.
+
+#### What to Expect
+##### -Timely Response: 
+We aim to respond to feedback and bug reports as quickly as possible. Please be patient as we investigate and address your concerns.
+
+##### -Transparency: 
+We'll keep you informed about the status of your feedback. Once a bug is fixed or a feature is implemented, we'll update you on the progress.
+
+##### -Community Engagement: 
+Your feedback helps shape the future of Google Calendar. We encourage community members to engage in discussions, share their thoughts, and collaborate on making Google Calendar even better.
+
+#### Thank You!
+Thank you for taking the time to provide feedback on Google Calendar. Your input is invaluable to us and helps us create a more robust and user-friendly application for everyone.
+
 ## Project Task Decomposition
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
@@ -207,7 +238,7 @@ Monitoring: Prometheus, Grafana
 ### Week 6:
 - Implement feature: Recurring Events ✔️
 - Perform load testing on Azure deployment
-- Update Project Documentation based on feedback
+- Update Project Documentation based on feedback ✔️
 - Write Unit Tests for Recurring Events
 - Conduct unit testing for Event Creation endpoints
 
