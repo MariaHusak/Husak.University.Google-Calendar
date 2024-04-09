@@ -239,7 +239,7 @@ Thank you for taking the time to provide feedback on Google Calendar. Your input
 - Implement feature: Recurring Events ✔️
 - Perform load testing on Azure deployment
 - Update Project Documentation based on feedback ✔️
-- Write Unit Tests for Recurring Events
+- Write Unit Tests for Recurring Events ✔️
 - Conduct unit testing for Event Creation endpoints
 
 ### Week 7:
