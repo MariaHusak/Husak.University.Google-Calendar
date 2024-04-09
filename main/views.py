@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
+from dateutil.relativedelta import relativedelta
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -61,7 +63,8 @@ def display_calendar(request, year=None, month=None):
     return render(request, 'main/calendar.html', {'calendar': cal_data, 'month_name': month_name,
                                                   'year_name': year_name, 'next_month': next_month,
                                                   'prev_month': prev_month, 'events': event_data})
-
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 @login_required
 def create_event(request):
@@ -73,36 +76,60 @@ def create_event(request):
         event_location = request.POST.get('event_location')
         event_description = request.POST.get('event_description')
         invited_emails = request.POST.getlist('invited_emails')
+        recurrence = request.POST.get('recurrence')
 
         creator = request.user
 
         event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
                                      end_time=end_time, location=event_location, description=event_description,
-                                     creator=creator)
+                                     creator=creator, recurrence=recurrence)
+        if recurrence:
+            if recurrence == 'daily':
+                delta = relativedelta(days=1)
+            elif recurrence == 'weekly':
+                delta = relativedelta(weeks=1)
+            elif recurrence == 'monthly':
+                delta = relativedelta(months=1)
+            elif recurrence == 'yearly':
+                delta = relativedelta(years=1)
+            else:
+                delta = None
 
-        for email in invited_emails:
-            try:
-                invited_user = User.objects.get(email=email)
-                event.invited_users.add(invited_user)
+            if delta:
+                event_date = datetime.strptime(event_date, '%Y-%m-%d').date()
+                end_date = datetime.today().date() + relativedelta(years=1)
+                while event_date < end_date:
+                    new_event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+                                                     end_time=end_time, location=event_location,
+                                                     description=event_description,
+                                                     creator=creator, recurrence=recurrence)
 
-                send_mail(
-                    'You have been invited to an event',
-                    f'You have been invited to the event "{event.title}" scheduled on {event.date} {event.start_time} - {event.end_time} by {event.creator}.',
-                    'husakmaria74@gmail.com',
-                    [email],
-                    fail_silently=False,
-                )
-                logger.info(f'Invitation email sent to {email} for event "{event.title}"')
-            except User.DoesNotExist:
-                logger.warning(f'User with email {email} does not exist. Invitation email not sent.')
-            except BadHeaderError:
-                logger.error(f'Invalid header found while sending email to {email}.')
-            except ValidationError as e:
-                logger.error(f'Validation error occurred while sending email to {email}: {str(e)}')
+                    for email in invited_emails:
+                        try:
+                            invited_user = User.objects.get(email=email)
+                            new_event.invited_users.add(invited_user)
+
+                            send_mail(
+                                'You have been invited to an event',
+                                f'You have been invited to the event "{event.title}" scheduled on {event_date} {start_time} - {end_time} by {creator}.',
+                                'husakmaria74@gmail.com',
+                                [email],
+                                fail_silently=False,
+                            )
+                            logger.info(f'Invitation email sent to {email} for event "{event.title}"')
+                        except User.DoesNotExist:
+                            logger.warning(f'User with email {email} does not exist. Invitation email not sent.')
+                        except BadHeaderError:
+                            logger.error(f'Invalid header found while sending email to {email}.')
+                        except ValidationError as e:
+                            logger.error(f'Validation error occurred while sending email to {email}: {str(e)}')
+
+                    event_date += delta
 
         return JsonResponse({'success': True})
     else:
         return JsonResponse({'success': False, 'error': 'Method not allowed'}, status=405)
+
 
 @login_required
 def delete_event(request, event_id):

@@ -6,6 +6,15 @@ class Event(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
+
+    RECURRENCE_CHOICES = [
+        ('daily', 'Daily'),
+        ('weekly', 'Weekly'),
+        ('monthly', 'Monthly'),
+        ('yearly', 'Yearly'),
+    ]
+    recurrence = models.CharField(max_length=10, choices=RECURRENCE_CHOICES, blank=True, null=True)
+
     event_type = models.CharField(max_length=10, choices=[('online', 'Online'), ('offline', 'Offline')],
                                   default='offline')
     location = models.CharField(max_length=100, blank=True, null=True, default='')
@@ -15,4 +24,5 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+
 

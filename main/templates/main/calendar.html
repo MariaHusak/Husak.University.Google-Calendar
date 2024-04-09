@@ -35,8 +35,13 @@
                                     <strong>Description:</strong> {{ event.description }}<br>
                                     <strong>Creator:</strong> {{ event.creator_nickname }}<br>
                                     <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
-                                    <button onclick="deleteEvent({{ event.id }})">Delete</button>
-
+                                    {% if event.recurrence %}
+                                        <strong>Recurrence:</strong> {{ event.recurrence }}<br>
+                                    {% endif %}
+                                    {% if event.recurrence %}
+                                        <button onclick="editEvent({{ event.id }})">Edit</button>
+                                        <button onclick="deleteEvent({{ event.id }})">Delete</button>
+                                    {% endif %}
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -61,6 +66,16 @@
     <input type="time" id="start_time" name="start_time"><br>
     <label for="end_time">End Time:</label><br>
     <input type="time" id="end_time" name="end_time"><br>
+
+    <label for="recurrence">Recurrence:</label><br>
+    <select id="recurrence" name="recurrence">
+        <option value="">None</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+    </select><br>
+
     <label for="event_location">Location:</label><br>
     <input type="text" id="event_location" name="event_location"><br>
     <label for="event_description">Description:</label><br>
