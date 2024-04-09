@@ -16,7 +16,6 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from django.contrib.auth.models import User
 
-
 '''class ReminderNotificationTests(TestCase):
     def test_handle_sends_reminder_for_upcoming_event(self):
         user = User.objects.create(username='test_user', email='test@example.com')
