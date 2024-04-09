@@ -217,7 +217,7 @@ Thank you for taking the time to provide feedback on Google Calendar. Your input
 ### Week 3:
 - Implement feature: Event Creation functionality ✔️
 - Configure Azure deployment settings
-- Write Project Documentation: Infrastructure Diagram
+- Write Project Documentation: Infrastructure Diagram ✔️
 - Write Unit Tests for Event Creation functionality ✔️
 - Write documentation for Azure deployment process ✔️
 
