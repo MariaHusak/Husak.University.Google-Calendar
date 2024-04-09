@@ -205,7 +205,7 @@ Monitoring: Prometheus, Grafana
 - Conduct unit testing for OAuth endpoints ✔️
 
 ### Week 6:
-- Implement feature: Recurring Events
+- Implement feature: Recurring Events ✔️
 - Perform load testing on Azure deployment
 - Update Project Documentation based on feedback
 - Write Unit Tests for Recurring Events
