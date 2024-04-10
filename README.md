@@ -202,30 +202,30 @@ Thank you for taking the time to provide feedback on Google Calendar. Your input
 ## Project Task Decomposition
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
-- Set up Azure deployment environment ✔️
-- Create project structure on GitHub repository ✔️
-- Define initial project architecture ✔️
+- Set up Azure deployment environment ✔️ !
+- Create project structure on GitHub repository ✔️ 
+- Define initial project architecture ✔️ !
 - Write Getting Started documentation for local setup ✔️
 
 ### Week 2:
 - Implement feature: Calendar View with Monthly Layout ✔️
 - Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline 
 - Write Project Documentation: Architecture Diagram ✔️
-- Write Unit Tests for User Authentication ✔️
+- Write Unit Tests for User Authentication ✔️ !
 - Create Postman collection for testing OAuth endpoints
 
 ### Week 3:
-- Implement feature: Event Creation functionality ✔️
+- Implement feature: Event Creation functionality ✔️ !
 - Configure Azure deployment settings
-- Write Project Documentation: Infrastructure Diagram ✔️
-- Write Unit Tests for Event Creation functionality ✔️
-- Write documentation for Azure deployment process ✔️
+- Write Project Documentation: Infrastructure Diagram ✔️ !
+- Write Unit Tests for Event Creation functionality ✔️ !
+- Write documentation for Azure deployment process ✔️ !
 
 ### Week 4:
-- Implement feature: Reminder Notifications via Email  ✔️
+- Implement feature: Reminder Notifications via Email  ✔️ !
 - Implement automated deployment using CI/CD pipeline
 - Write Project Tasks Decomposition ✔️
-- Write Unit Tests for Reminder Notifications ✔️
+- Write Unit Tests for Reminder Notifications ✔️ !
 - Create Postman collection for testing Reminder endpoints
 
 ### Week 5:
