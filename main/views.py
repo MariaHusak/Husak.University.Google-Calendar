@@ -9,10 +9,12 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
 from dateutil.relativedelta import relativedelta
+from django.views.decorators.http import require_POST
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
+@login_required
 def index(request):
     return render(request, 'main/index.html')
 
@@ -45,7 +47,9 @@ def display_calendar(request, year=None, month=None):
     else:
         prev_month = f"{year}/{month - 1:02d}"
 
-    events = Event.objects.filter(date__year=year, date__month=month)
+    # Filter events based on the logged-in user
+    events = Event.objects.filter(date__year=year, date__month=month, creator=request.user)
+
     event_data = []
     for event in events:
         event_info = {
@@ -63,8 +67,6 @@ def display_calendar(request, year=None, month=None):
     return render(request, 'main/calendar.html', {'calendar': cal_data, 'month_name': month_name,
                                                   'year_name': year_name, 'next_month': next_month,
                                                   'prev_month': prev_month, 'events': event_data})
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
 
 @login_required
 def create_event(request):
@@ -79,6 +81,9 @@ def create_event(request):
         recurrence = request.POST.get('recurrence')
 
         creator = request.user
+
+        if not all([event_title, event_date, start_time, end_time]):
+            return JsonResponse({'success': False, 'error': 'Incomplete event data'}, status=400)
 
         event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
                                      end_time=end_time, location=event_location, description=event_description,
@@ -131,18 +136,18 @@ def create_event(request):
         return JsonResponse({'success': False, 'error': 'Method not allowed'}, status=405)
 
 
-@login_required
-def delete_event(request, event_id):
-    if request.method == 'POST':
-        try:
-            event = Event.objects.get(id=event_id)
-            event.delete()
-            logger.info(f"Event with ID {event_id} deleted successfully.")
-            return JsonResponse({'success': True})
-        except Event.DoesNotExist:
-            logger.warning(f"Attempted to delete non-existing event with ID {event_id}.")
-            return JsonResponse({'success': False, 'error': 'Event does not exist'}, status=404)
-    else:
-        logger.error("DELETE request received with incorrect method.")
-        return JsonResponse({'success': False, 'error': 'Method not allowed'}, status=405)
+from django.http import JsonResponse
 
+@login_required
+@require_POST
+def delete_event(request, event_title):
+    try:
+        event = Event.objects.get(title=event_title)
+        # Check if the requesting user is the creator of the event
+        if event.creator == request.user:
+            event.delete()
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'error': 'You are not authorized to delete this event.'}, status=403)
+    except Event.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Event does not exist.'}, status=404)
