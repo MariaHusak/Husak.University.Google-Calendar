@@ -15,8 +15,9 @@ from django.urls import reverse
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
-
+# Unit Tests for Reminder Notifications
 class ReminderNotificationTests(TestCase):
     def test_handle_sends_reminder_for_upcoming_event(self):
         user = User.objects.create(username='test_user', email='test@example.com')
@@ -50,6 +51,7 @@ class ReminderNotificationTests(TestCase):
                     fail_silently=False,
                 )
 
+# Unit Tests for Invite Attendees functionality
 class InviteOtherTestCase(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
@@ -113,7 +115,7 @@ class InviteOtherTestCase(TestCase):
 
 
 
-
+# Unit Tests for Recurring Events
 class EventTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create(username='testuser', email='test@example.com', password='testpassword')
@@ -158,6 +160,7 @@ class EventTestCase(TestCase):
             next_month_date += relativedelta(months=1)
 
 
+# Unit testing for Event Creation endpoints
 class EventCreationTestCase(TestCase):
     def setUp(self):
         self.client = Client()
@@ -222,5 +225,77 @@ class EventCreationTestCase(TestCase):
 
         event = Event.objects.filter(title='Test Event').first()
         self.assertIsNone(event)
+
+
+#Unit Tests for Event Creation functionality
+class EventCreationFunctionalityTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', email='test@example.com', password='testpassword')
+
+    def test_event_creation(self):
+        event_data = {
+            'event_title': 'Test Event',
+            'event_date': '2024-04-10',
+            'start_time': '10:00',
+            'end_time': '12:00',
+            'event_location': 'Test Location',
+            'event_description': 'Test Description',
+            'recurrence': None,
+            'invited_emails': []
+        }
+
+        self.create_event(event_data)
+        self.assertTrue(Event.objects.filter(title='Test Event').exists())
+
+
+    def create_event(self, event_data):
+        event_title = event_data['event_title']
+        event_date = event_data['event_date']
+        start_time = event_data['start_time']
+        end_time = event_data['end_time']
+        event_location = event_data['event_location']
+        event_description = event_data['event_description']
+        recurrence = event_data['recurrence']
+
+        event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+                                     end_time=end_time, location=event_location, description=event_description,
+                                     creator=self.user, recurrence=recurrence)
+
+        invited_emails = event_data['invited_emails']
+        for email in invited_emails:
+            invited_user = User.objects.get(email=email)
+            event.invited_users.add(invited_user)
+
+# Unit Tests for User Authentication
+class UserAuthenticationTestCase(TestCase):
+    def setUp(self):
+        self.username = 'testuser'
+        self.password = 'testpassword'
+        self.user = User.objects.create_user(username=self.username, password=self.password)
+
+    def test_correct_credentials(self):
+        user = authenticate(username=self.username, password=self.password)
+        self.assertIsNotNone(user)
+        self.assertEqual(user, self.user)
+
+    def test_incorrect_username(self):
+        user = authenticate(username='wrongusername', password=self.password)
+        self.assertIsNone(user)
+
+    def test_incorrect_password(self):
+        user = authenticate(username=self.username, password='wrongpassword')
+        self.assertIsNone(user)
+
+    def test_blank_credentials(self):
+        user = authenticate(username='', password='')
+        self.assertIsNone(user)
+
+    def test_inactive_user(self):
+        self.user.is_active = False
+        self.user.save()
+        user = authenticate(username=self.username, password=self.password)
+        self.assertIsNone(user)
+
+
 
 

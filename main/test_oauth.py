@@ -13,6 +13,8 @@ from faker import Faker
 from django.contrib.sites.models import Site
 from allauth.socialaccount.models import SocialApp
 
+#Unit testing for OAuth endpoints
+
 @pytest.fixture
 def api_client():
     return APIClient()
