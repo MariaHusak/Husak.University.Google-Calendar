@@ -116,4 +116,20 @@ h2
     color: #999; /* Color for "No events found" message */
 }
 
+.event-details {
+    display: none;
+}
 
+
+button.event-button {
+    background-color: #e7e7e7;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}

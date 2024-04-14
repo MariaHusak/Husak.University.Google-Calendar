@@ -25,22 +25,24 @@
             {% for day in week %}
                 <td>
                     {{ day }}
-                    <ul>
                         {% for event in events %}
                             {% if event.date.day == day %}
-                                <li>
-                                    <strong>Title:</strong> {{ event.title }}<br>
-                                    <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}<br>
-                                    <strong>Location:</strong> {{ event.location }}<br>
-                                    <strong>Description:</strong> {{ event.description }}<br>
-                                    <strong>Creator:</strong> {{ event.creator_nickname }}<br>
-                                    <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
-                                    {% if event.recurrence %}
-                                        <strong>Recurrence:</strong> {{ event.recurrence }}<br>
-                                    {% endif %}
-                                        <button onclick="deleteEvent({{ event.title }})">Delete</button>
+                                <dt>
+                                    <button class="event-button" onclick="toggleEventDetails(this)">{{ event.title }}</button>
+                                    <div class="event-details" style="display: none;">
+                                        <strong>Title:</strong> {{ event.title }}<br>
+                                        <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}<br>
+                                        <strong>Location:</strong> {{ event.location }}<br>
+                                        <strong>Description:</strong> {{ event.description }}<br>
+                                        <strong>Creator:</strong> {{ event.creator_nickname }}<br>
+                                        <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
+                                        {% if event.recurrence %}
+                                            <strong>Recurrence:</strong> {{ event.recurrence }}<br>
+                                        {% endif %}
+                                        <a href="{% url 'edit_event' event.id %}" class="edit-event-button">Edit Event</a>
 
-                                </li>
+                                    </div>
+                                </dt>
                             {% endif %}
                         {% endfor %}
                     </ul>
@@ -86,6 +88,21 @@
 
 {% block scripts %}
 <script>
+
+function toggleEventDetails(button) {
+    var details = button.nextElementSibling;
+    if (details.style.display === 'block') {
+        details.style.display = 'none';
+    } else {
+        // Hide all other event details before showing this one
+        var allDetails = document.querySelectorAll('.event-details');
+        allDetails.forEach(function(item) {
+            item.style.display = 'none';
+        });
+        details.style.display = 'block';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("event-form").addEventListener("submit", function(event) {
         event.preventDefault();
@@ -108,45 +125,42 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function deleteEvent(eventTitle) {
-    fetch(`/delete_event/${encodeURIComponent(eventTitle)}/`, {
-        method: 'POST',
-        headers: {
-            'X-CSRFToken': getCookie('csrftoken'),  // Ensure to include CSRF token
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            alert("Event deleted successfully!");
-            // Optionally, you can remove the event from the UI without reloading the page
-        } else {
-            alert("Failed to delete event. Please try again.");
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("An unexpected error occurred.");
-    });
-}
-
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
-
-
 </script>
 {% endblock %}
 
+{% block style %}
+<style>
+.event-details {
+    display: none;
+}
+
+.event-button {
+    background-color: #e7e7e7;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 4px 2px;
+    border-radius: 15px;
+}
+
+.edit-event-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+
+{% endblock %}
 

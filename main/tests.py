@@ -266,7 +266,7 @@ class EventCreationFunctionalityTestCase(TestCase):
             invited_user = User.objects.get(email=email)
             event.invited_users.add(invited_user)
 
-# Unit Tests for User Authentication
+#Unit Tests for User Authentication
 class UserAuthenticationTestCase(TestCase):
     def setUp(self):
         self.username = 'testuser'

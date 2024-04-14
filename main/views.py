@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
 from dateutil.relativedelta import relativedelta
-from django.views.decorators.http import require_POST
+from django.shortcuts import get_object_or_404, redirect
+from .forms import EventForm
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -47,12 +48,12 @@ def display_calendar(request, year=None, month=None):
     else:
         prev_month = f"{year}/{month - 1:02d}"
 
-    # Filter events based on the logged-in user
     events = Event.objects.filter(date__year=year, date__month=month, creator=request.user)
 
     event_data = []
     for event in events:
         event_info = {
+            'id': event.id,
             'title': event.title,
             'date': event.date,
             'start_time': event.start_time,
@@ -67,6 +68,7 @@ def display_calendar(request, year=None, month=None):
     return render(request, 'main/calendar.html', {'calendar': cal_data, 'month_name': month_name,
                                                   'year_name': year_name, 'next_month': next_month,
                                                   'prev_month': prev_month, 'events': event_data})
+
 
 @login_required
 def create_event(request):
@@ -135,19 +137,14 @@ def create_event(request):
     else:
         return JsonResponse({'success': False, 'error': 'Method not allowed'}, status=405)
 
-
-from django.http import JsonResponse
-
 @login_required
-@require_POST
-def delete_event(request, event_title):
-    try:
-        event = Event.objects.get(title=event_title)
-        # Check if the requesting user is the creator of the event
-        if event.creator == request.user:
-            event.delete()
-            return JsonResponse({'success': True})
-        else:
-            return JsonResponse({'success': False, 'error': 'You are not authorized to delete this event.'}, status=403)
-    except Event.DoesNotExist:
-        return JsonResponse({'success': False, 'error': 'Event does not exist.'}, status=404)
+def edit_event(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    if request.method == 'POST':
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            form.save()
+            return redirect('calendar')
+    else:
+        form = EventForm(instance=event)
+    return render(request, 'main/edit_event.html', {'form': form, 'event_id': event_id})
