@@ -244,9 +244,9 @@ Thank you for taking the time to provide feedback on Google Calendar. Your input
 
 ### Week 7:
 - Implement feature: Event Editing ✔️
-- Perform security testing on Azure deployment
+- Design UI for Event Editing ✔️
 - Review and refine Project Tasks Decomposition
-- Write Unit Tests for Event Editing
+- Write Unit Tests for Event Editing ✔️
 - Conduct unit testing for Reminder endpoints
 
 ### Week 8:
