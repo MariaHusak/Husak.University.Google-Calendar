@@ -1,46 +1,33 @@
-"""import os
+import os
 import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mycalendar.settings')
 django.setup()
 
-from django.core.management import call_command
-from django.core.management.base import CommandError
-from django.core.mail import outbox
-from django.test import TestCase
-from django.contrib.auth.models import User
-from main.models import Event
-from datetime import datetime, timedelta
-from unittest.mock import patch
+import unittest
+from unittest.mock import patch, MagicMock
+from crontab import CronTab
 
-import logging
-from django.contrib.auth.decorators import login_required
+def create_reminder_job():
+    job_scheduler = CronTab(user=True)
+    command = 'python3 ./manage.py create_reminders'
+    job = job_scheduler.new(command=command)
+    job.minute.on(0)
+    job.hour.on(0)
+    return job
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+class TestCronJob(unittest.TestCase):
+    @patch('crontab.CronTab')
+    def test_cron_job_setup(self, mock_crontab):
+        mock_job = MagicMock()
 
+        mock_crontab_instance = MagicMock()
+        mock_crontab_instance.new.return_value = mock_job
+        mock_crontab.return_value = mock_crontab_instance
 
-class ReminderTestCase(TestCase):
-    def setUp(self):
-        self.user = User.objects.create_user(username='testuser', email='test@example.com', password='password')
+        create_reminder_job()
 
-    @patch('django.core.mail.send_mail')
-    def test_send_reminder(self, mock_send_mail):
-        event_date = datetime.now() + timedelta(days=1)
-        event = Event.objects.create(title='Test Event', date=event_date.date(), start_time='10:00', end_time='11:00', creator=self.user)
+        mock_crontab_instance(command='python3 ./manage.py create_reminders')
 
-        logger.info(f'Creator: {self.user}')
-        call_command('create_reminders')
-
-        logger.info(f'Outbox length: {len(outbox)}')
-        logger.info(f'Outbox content: {outbox}')
-
-        self.assertEqual(len(outbox), 1)
-        self.assertEqual(outbox[0].subject, 'Upcoming Event Reminder')
-        self.assertEqual(outbox[0].to, [self.user.email])
-
-    @patch('django.core.mail.send_mail')
-    def test_no_upcoming_events(self, mock_send_mail):
-        with self.assertRaises(CommandError):
-            call_command('create_reminders')"""
-
+        mock_job.minute.on(0)
+        mock_job.hour.on(0)
