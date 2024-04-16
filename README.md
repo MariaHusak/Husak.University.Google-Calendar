@@ -200,6 +200,47 @@ Your feedback helps shape the future of Google Calendar. We encourage community 
 Thank you for taking the time to provide feedback on Google Calendar. Your input is invaluable to us and helps us create a more robust and user-friendly application for everyone.
 
 ## Project Task Decomposition
+#### 1. Project Planning and Setup:
+Define project scope, objectives, and deliverables.
+
+Set up project repository on GitHub.
+
+Define project structure and directory layout.
+
+Set up virtual environment and install necessary dependencies.
+
+#### 2. Frontend Development:
+Design wireframes and user interface mockups.
+
+Implement HTML/CSS templates for different pages (e.g., homepage, calendar view, event details).
+
+Implement frontend logic using JavaScript.
+
+#### 3. Backend Development:
+Define data models for users, events, calendars, etc.
+
+Implement authentication and authorization mechanisms.
+
+Implement CRUD (Create, Read, Update, Delete) operations for managing events, calendars, etc.
+
+Implement business logic for handling calendar events, reminders, notifications, etc.
+
+#### 4. Database Setup and Management:
+Choose a suitable database (e.g., MySQL).
+
+Set up database schema based on defined data models.
+
+Implement database migrations for version control of database schema changes.
+
+#### 5. Deployment and Infrastructure Setup:
+Choose a suitable hosting provider (e.g., Azure).
+
+Set up deployment pipelines for continuous integration and deployment (CI/CD).
+
+Configure server environment and dependencies.
+
+Deploy application to production server.
+
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
 - Set up Azure deployment environment ✔️ 
@@ -245,9 +286,9 @@ Thank you for taking the time to provide feedback on Google Calendar. Your input
 ### Week 7:
 - Implement feature: Event Editing ✔️
 - Design UI for Event Editing ✔️
-- Review and refine Project Tasks Decomposition
+- Review and refine Project Tasks Decomposition  ✔️
 - Write Unit Tests for Event Editing ✔️
-- Conduct unit testing for Reminder endpoints
+- Conduct unit testing for Reminder endpoints ✔️
 
 ### Week 8:
 - Implement feature: Guest RSVP for Events
