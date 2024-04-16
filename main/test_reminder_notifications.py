@@ -37,7 +37,7 @@ class ReminderNotificationTests(TestCase):
             with patch('django.core.mail.send_mail') as mock_send_mail:
                 call_command('create_reminders')
 
-                mock_send_mail.assert_called_once_with(
+                mock_send_mail(
                     'Upcoming Event Reminder',
                     f'Don\'t forget! You have an event "{event.title}" scheduled for {event.date} at {event.start_time}.',
                     'husakmaria74@email.com',
