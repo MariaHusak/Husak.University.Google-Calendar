@@ -241,6 +241,13 @@ Configure server environment and dependencies.
 
 Deploy application to production server.
 
+#### 6. Documentation and Knowledge Sharing:
+Write project documentation including setup instructions, API documentation, and user guides.
+
+Create architecture diagrams and infrastructure diagrams for better understanding of system components.
+
+Document CI/CD processes and best practices for future reference.
+
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
 - Set up Azure deployment environment ✔️ 
