@@ -299,7 +299,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 8:
 - Implement feature: Guest RSVP for Events
-- Perform scalability testing on Azure deployment
+- Develop UI components for Event Creation
 - Review and refine documentation
 - Write Unit Tests for Guest RSVP functionality
 - Conduct unit testing for Invite Attendees endpoints
@@ -319,13 +319,14 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Event Editing endpoints
 
 ### Week 11:
-- Implement feature: Sync Across Devices
+- Implement feature: Customizable Event Categories
 - Prepare for project deployment
 - Conduct final round of testing and bug fixes
-- Write Unit Tests for Sync Across Devices
+- Write Unit Tests for Customizable Event Categories
 - Conduct unit testing for Guest RSVP endpoints
 
 ### Week 12:
+- Implement feature: Welcome Email
 - Finalize deployment and release
 - Conduct post-release monitoring and support
 - Conduct retrospective meeting for project review
