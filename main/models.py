@@ -26,6 +26,9 @@ class Event(models.Model):
     description = models.TextField()
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_events')
     invited_users = models.ManyToManyField(User, related_name='invited_events')
+    attendees = models.ManyToManyField(User, related_name='attended_events')
 
     def __str__(self):
         return self.title
+
+

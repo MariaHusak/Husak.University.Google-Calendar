@@ -55,35 +55,6 @@
     <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
     <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
 </div>
-
-<form id="event-form">
-    {% csrf_token %}
-    <label for="event_title">Title:</label><br>
-    <input type="text" id="event_title" name="event_title"><br>
-    <label for="event_date">Date:</label><br>
-    <input type="date" id="event_date" name="event_date"><br>
-    <label for="start_time">Start Time:</label><br>
-    <input type="time" id="start_time" name="start_time"><br>
-    <label for="end_time">End Time:</label><br>
-    <input type="time" id="end_time" name="end_time"><br>
-
-    <label for="recurrence">Recurrence:</label><br>
-    <select id="recurrence" name="recurrence">
-        <option value="">None</option>
-        <option value="daily">Daily</option>
-        <option value="weekly">Weekly</option>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-    </select><br>
-
-    <label for="event_location">Location:</label><br>
-    <input type="text" id="event_location" name="event_location"><br>
-    <label for="event_description">Description:</label><br>
-    <textarea id="event_description" name="event_description"></textarea><br>
-    <label for="invited_emails">Invite others (comma-separated email addresses):</label><br>
-    <input type="text" id="invited_emails" name="invited_emails"><br>
-    <button type="submit">Create Event</button>
-</form>
 {% endblock maincontent %}
 
 {% block scripts %}
@@ -103,27 +74,6 @@ function toggleEventDetails(button) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("event-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var formData = new FormData(this);
-        fetch('/create_event/', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                alert("Event created successfully!");
-            } else {
-                alert("Failed to create event. Please try again.");
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("An unexpected error occurred.");
-        });
-    });
-});
 
 </script>
 {% endblock %}

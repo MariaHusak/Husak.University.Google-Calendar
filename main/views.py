@@ -48,10 +48,19 @@ def display_calendar(request, year=None, month=None):
     else:
         prev_month = f"{year}/{month - 1:02d}"
 
-    events = Event.objects.filter(date__year=year, date__month=month, creator=request.user)
+    user = request.user
+
+    # Fetch events where the user is the creator
+    creator_events = Event.objects.filter(date__year=year, date__month=month, creator=user)
+
+    # Fetch events where the user is invited and has accepted the invitation
+    invited_events = Event.objects.filter(date__year=year, date__month=month, attendees=user, invited_users=user)
+
+    # Combine both creator and invited events
+    all_events = creator_events | invited_events
 
     event_data = []
-    for event in events:
+    for event in all_events:
         event_info = {
             'id': event.id,
             'title': event.title,
@@ -87,55 +96,62 @@ def create_event(request):
         if not all([event_title, event_date, start_time, end_time]):
             return JsonResponse({'success': False, 'error': 'Incomplete event data'}, status=400)
 
-        event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                     end_time=end_time, location=event_location, description=event_description,
-                                     creator=creator, recurrence=recurrence)
-        if recurrence:
-            if recurrence == 'daily':
-                delta = relativedelta(days=1)
-            elif recurrence == 'weekly':
-                delta = relativedelta(weeks=1)
-            elif recurrence == 'monthly':
-                delta = relativedelta(months=1)
-            elif recurrence == 'yearly':
-                delta = relativedelta(years=1)
-            else:
-                delta = None
+        try:
+            event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+                                         end_time=end_time, location=event_location, description=event_description,
+                                         creator=creator, recurrence=recurrence)
+            if recurrence:
+                if recurrence == 'daily':
+                    delta = relativedelta(days=1)
+                elif recurrence == 'weekly':
+                    delta = relativedelta(weeks=1)
+                elif recurrence == 'monthly':
+                    delta = relativedelta(months=1)
+                elif recurrence == 'yearly':
+                    delta = relativedelta(years=1)
+                else:
+                    delta = None
 
-            if delta:
-                event_date = datetime.strptime(event_date, '%Y-%m-%d').date()
-                end_date = datetime.today().date() + relativedelta(years=1)
-                while event_date < end_date:
-                    new_event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                                     end_time=end_time, location=event_location,
-                                                     description=event_description,
-                                                     creator=creator, recurrence=recurrence)
+                if delta:
+                    event_date = datetime.strptime(event_date, '%Y-%m-%d').date()
+                    end_date = datetime.today().date() + relativedelta(years=1)
+                    while event_date < end_date:
+                        new_event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
+                                                         end_time=end_time, location=event_location,
+                                                         description=event_description,
+                                                         creator=creator, recurrence=recurrence)
 
-                    for email in invited_emails:
-                        try:
-                            invited_user = User.objects.get(email=email)
-                            new_event.invited_users.add(invited_user)
+            for email in invited_emails:
+                try:
+                    invited_user = User.objects.get(email=email)
+                    event.invited_users.add(invited_user)
 
-                            send_mail(
-                                'You have been invited to an event',
-                                f'You have been invited to the event "{event.title}" scheduled on {event_date} {start_time} - {end_time} by {creator}.',
-                                'husakmaria74@gmail.com',
-                                [email],
-                                fail_silently=False,
-                            )
-                            logger.info(f'Invitation email sent to {email} for event "{event.title}"')
-                        except User.DoesNotExist:
-                            logger.warning(f'User with email {email} does not exist. Invitation email not sent.')
-                        except BadHeaderError:
-                            logger.error(f'Invalid header found while sending email to {email}.')
-                        except ValidationError as e:
-                            logger.error(f'Validation error occurred while sending email to {email}: {str(e)}')
+                    send_mail(
+                        'You have been invited to an event',
+                        f'You have been invited to the event "{event.title}" scheduled on {event_date} {start_time} - {end_time} by {creator}.',
+                        'husakmaria74@gmail.com',
+                        [email],
+                        fail_silently=False,
+                    )
+                    logger.info(f'Invitation email sent to {email} for event "{event.title}"')
+                except User.DoesNotExist:
+                    logger.warning(f'User with email {email} does not exist. Invitation email not sent.')
+                except BadHeaderError:
+                    logger.error(f'Invalid header found while sending email to {email}.')
+                except ValidationError as e:
+                    logger.error(f'Validation error occurred while sending email to {email}: {str(e)}')
 
-                    event_date += delta
-
-        return JsonResponse({'success': True})
+            return redirect('calendar')
+        except Exception as e:
+            if event:
+                event.delete()
+            logger.error(f'Failed to create event: {str(e)}')
+            return JsonResponse({'success': False, 'error': 'Failed to create event'}, status=500)
     else:
-        return JsonResponse({'success': False, 'error': 'Method not allowed'}, status=405)
+        form = EventForm()
+        return render(request, 'main/create_event.html', {'form': form})
+
+
 
 @login_required
 def edit_event(request, event_id):
@@ -148,3 +164,44 @@ def edit_event(request, event_id):
     else:
         form = EventForm(instance=event)
     return render(request, 'main/edit_event.html', {'form': form, 'event_id': event_id})
+
+@login_required
+def invitations_page(request):
+    user = request.user
+    invited_events = Event.objects.filter(invited_users=user)
+
+    return render(request, 'main/invitations.html', {'invited_events': invited_events})
+
+
+@login_required
+def respond_invitation(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    response = request.POST.get('response')
+
+    if response == 'accepted':
+        event.attendees.add(request.user)
+        event.save()
+
+        send_mail(
+            'Invitation Accepted',
+            f'{request.user.username} has accepted your invitation to the event "{event.title}".',
+            'organizer@example.com',
+            [event.creator.email],
+            fail_silently=False,
+        )
+
+    elif response == 'declined':
+        event.invited_users.remove(request.user)
+        event.save()
+
+        send_mail(
+            'Invitation Declined',
+            f'{request.user.username} has declined your invitation to the event "{event.title}".',
+            'organizer@example.com',
+            [event.creator.email],
+            fail_silently=False,
+        )
+
+    return redirect('calendar')
+
+
