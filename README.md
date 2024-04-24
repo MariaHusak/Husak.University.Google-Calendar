@@ -13,28 +13,52 @@ Before you begin, ensure you have the following:
 - A Google account
 - A computer with internet access
 - A web browser (Google Chrome, Mozilla Firefox, Safari, etc.)
-#### Steps to Setup Google Calendar Locally
-##### Step 1: Sign in to Google Account
+#### Table of Contents
+- Creating Events
+- Managing Invitations
+- Privacy Policy
 
-1. Open your preferred web browser.
-2. Go to Google Calendar.
-3. Sign in with your Google account credentials (email and password).
+#### Step 1: Creating Events
+##### Using the Calendar Interface
+1. Learn how to navigate the calendar interface.
+2. Access different views such as daily, weekly, and monthly.
+
+##### Adding Events
+1. Click on a date to create a new event.
+2. Fill in event details such as title, date, time, location, and description.
+3. Optionally set recurrence patterns for recurring events.
+ 
+##### Editing Events
+1. Edit event details directly from the calendar interface.
+2. Change event time, location, or description as needed.
+
+#### Step 2: Managing Invitations
+##### Receiving Invitations
+1. Understand how to receive event invitations from other users.
+2. Get notified via email when you receive a new invitation.
    
-##### Step 2: Access Calendar Settings
+##### Responding to Invitations
+1. Accept or decline event invitations directly from your calendar interface.
+2. RSVP to invitations to let organizers know your availability.
 
-1. Once logged in, click on the gear icon located in the top right corner of the screen.
-2. From the dropdown menu, select "Settings".
+#### Step 3: Privacy Policy
+##### Information Collection
+1. Learn about the types of information collected when using Google Calendar.
+2. Understand how your personal data is handled and protected.
+   
+##### Data Usage
+1. Explore how collected information is used to provide the calendar service.
+2. Discover how event data is processed and stored securely.
 
-##### Step 3: Configure Calendar Settings
+##### User Control and Rights
+1. Learn about your rights regarding access, update, and deletion of account and event data.
+2. Understand how to control notifications and opt-out of certain data processing activities.
 
-1. In the Settings page, navigate to the "General" tab.
-2. Adjust settings such as time zone, working hours, and default event duration according to your preferences.
-3. Click on the "Save" button to apply the changes.
+#### Conclusion
+You're now ready to start using Google Calendar to manage your events and stay organized. If you have any questions or need further assistance, feel free to explore the help resources provided by Google or reach out to their support team.
 
-##### Step 4: Explore Calendar Features
+Happy scheduling! 🗓️
 
-1. Familiarize yourself with the various features of Google Calendar, including creating events, setting reminders, and sharing calendars.
-2. Navigate through the different views (day, week, month, etc.) to understand how your schedule will appear.
 ## Project Documentation
 ### Introduction
 Welcome to the documentation for project, a comprehensive and user-friendly calendar application built on the Django framework. This documentation serves as a guide for developers, testers providing insights into its architecture, features, deployment process, and more.
@@ -300,9 +324,9 @@ Document CI/CD processes and best practices for future reference.
 ### Week 8:
 - Implement feature: Guest RSVP for Events ✔️
 - Develop UI components for Event Creation ✔️
-- Review and refine documentation
+- Review and refine documentation ✔️
 - Write Unit Tests for Guest RSVP functionality ✔️
-- Conduct unit testing for Invite Attendees endpoints
+- Conduct unit testing for Invite Attendees endpoints ✔️
 
 ### Week 9:
 - Implement feature: Sharing Calendars
