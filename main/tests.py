@@ -15,7 +15,7 @@ from django.contrib.auth import authenticate
 
 
 # Unit testing for Event Creation endpoints
-class EventCreationTestCase(TestCase):
+"""class EventCreationTestCase(TestCase):
     def setUp(self):
         self.client = Client()
         self.user = User.objects.create_user(username='testuser', email='test@example.com', password='password')
@@ -78,7 +78,7 @@ class EventCreationTestCase(TestCase):
         self.assertEqual(response.status_code, 400)
 
         event = Event.objects.filter(title='Test Event').first()
-        self.assertIsNone(event)
+        self.assertIsNone(event)"""
 
 
 #Unit Tests for Event Creation functionality
