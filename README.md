@@ -298,8 +298,8 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Reminder endpoints ✔️
 
 ### Week 8:
-- Implement feature: Guest RSVP for Events
-- Develop UI components for Event Creation
+- Implement feature: Guest RSVP for Events ✔️
+- Develop UI components for Event Creation ✔️
 - Review and refine documentation
 - Write Unit Tests for Guest RSVP functionality
 - Conduct unit testing for Invite Attendees endpoints
