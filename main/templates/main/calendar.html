@@ -12,6 +12,7 @@
     <h2>{{ month_name }} {{ year_name }}</h2>
     <table class="cal" border="0">
         <tr>
+            <tr>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -20,46 +21,53 @@
             <th>Saturday</th>
             <th>Sunday</th>
         </tr>
+        </tr>
         {% for week in calendar %}
             <tr>
-            {% for day in week %}
-                <td>
-                    {{ day }}
-                        {% for event in events %}
-                            {% if event.date.day == day %}
-                                <dt>
-                                    <button class="event-button" onclick="toggleEventDetails(this)">{{ event.title }}</button>
-                                    <div class="event-details" style="display: none;">
-                                        <strong>Title:</strong> {{ event.title }}<br>
-                                        <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}<br>
-                                        <strong>Location:</strong> {{ event.location }}<br>
-                                        <strong>Description:</strong> {{ event.description }}<br>
-                                        <strong>Creator:</strong> {{ event.creator_nickname }}<br>
-                                        <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
-                                        {% if event.recurrence %}
-                                            <strong>Recurrence:</strong> {{ event.recurrence }}<br>
-                                        {% endif %}
-                                        <a href="{% url 'edit_event' event.id %}" class="edit-event-button">Edit Event</a>
-
-                                    </div>
-                                </dt>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </td>
-            {% endfor %}
+                {% for day in week %}
+                    {% if day != 0 %}
+                        <td>
+                            {{ day }}
+                            {% for event in events %}
+                                {% if event.date.day == day %}
+                                    <dt>
+                                        <button class="event-button" onclick="toggleEventDetails(this)">{{ event.title }}</button>
+                                        <div class="event-details" style="display: none;">
+                                            <div class="event-border">
+                                                <strong>Title:</strong> {{ event.title }}<br>
+                                                <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}<br>
+                                                <strong>Location:</strong> {{ event.location }}<br>
+                                                <strong>Description:</strong> {{ event.description }}<br>
+                                                <strong>Creator:</strong> {{ event.creator_nickname }}<br>
+                                                <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>
+                                                {% if event.recurrence %}
+                                                    <strong>Recurrence:</strong> {{ event.recurrence }}<br>
+                                                {% endif %}
+                                            </div>
+                                            <a href="{% url 'edit_event' event.id %}" class="edit-event-button">Edit Event</a>
+                                        </div>
+                                    </dt>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    {% else %}
+                        <td class="empty"></td>
+                    {% endif %}
+                {% endfor %}
             </tr>
         {% endfor %}
     </table>
 
-    <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
-    <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
+     <div class="button-container">
+        <a class="button1" href="/calendar/{{ prev_month }}"><span style='font-size:20px;'>&#9204;</span></a>
+        <a class="button1" href="/calendar/{{ next_month }}"><span style='font-size:20px;'>&#9205;</span></a>
+    </div>
+
 </div>
 {% endblock maincontent %}
 
 {% block scripts %}
 <script>
-
 function toggleEventDetails(button) {
     var details = button.nextElementSibling;
     if (details.style.display === 'block') {
@@ -73,44 +81,5 @@ function toggleEventDetails(button) {
         details.style.display = 'block';
     }
 }
-
-
 </script>
 {% endblock %}
-
-{% block style %}
-<style>
-.event-details {
-    display: none;
-}
-
-.event-button {
-    background-color: #e7e7e7;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    cursor: pointer;
-    margin: 4px 2px;
-    border-radius: 15px;
-}
-
-.edit-event-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-</style>
-
-{% endblock %}
-
