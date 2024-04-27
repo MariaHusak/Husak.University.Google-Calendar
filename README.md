@@ -330,7 +330,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 9:
 - Implement feature: Sharing Calendars
-- Perform stress testing on Azure deployment
+- Design UI components for displaying Calendar View
 - Address any outstanding issues in documentation
 - Write Unit Tests for Sharing Calendars
 - Conduct unit testing for Recurring Events endpoints
