@@ -330,10 +330,10 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 9:
 - Implement feature: Sharing Calendars
-- Design UI components for displaying Calendar View
+- Design UI components for displaying Calendar View ✔️
 - Address any outstanding issues in documentation
-- Write Unit Tests for Sharing Calendars
-- Conduct unit testing for Recurring Events endpoints
+- Write Unit Tests for Sharing Calendars ✔️
+- Conduct unit testing for Recurring Events endpoints ✔️
 
 ### Week 10:
 - Implement feature: Search Functionality
