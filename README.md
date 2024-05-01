@@ -329,7 +329,7 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Invite Attendees endpoints ✔️
 
 ### Week 9:
-- Implement feature: Sharing Calendars
+- Implement feature: Sharing Calendars ✔️
 - Design UI components for displaying Calendar View ✔️
 - Address any outstanding issues in documentation ✔️
 - Write Unit Tests for Sharing Calendars ✔️
