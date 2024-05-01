@@ -1,4 +1,4 @@
-## Husak.University.Google-Calendar
+## Husak.University.Google-Calendar (Project - 6)
 ## Author
 Mariia Husak FEP-21
 
@@ -65,7 +65,7 @@ Welcome to the documentation for project, a comprehensive and user-friendly cale
 ### Architecture Diagram 
 You can see the architecture diagram here:
 
-https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitationId=inv_75e9b6ef-4c50-456e-846e-496b8b10d010&page=0_0#
+https://miro.com/app/board/uXjVKNOG358=/
 ### Infrastructure Diagram
 You can see the infrastructure diagram here:
 
@@ -331,7 +331,7 @@ Document CI/CD processes and best practices for future reference.
 ### Week 9:
 - Implement feature: Sharing Calendars
 - Design UI components for displaying Calendar View ✔️
-- Address any outstanding issues in documentation
+- Address any outstanding issues in documentation ✔️
 - Write Unit Tests for Sharing Calendars ✔️
 - Conduct unit testing for Recurring Events endpoints ✔️
 
