@@ -198,13 +198,12 @@ USE_L10N = True
 USE_TZ = True
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
+"""CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 300
+CELERY_TASK_TIME_LIMIT = 300"""
 
-# Django Celery Beat Configuration
-INSTALLED_APPS += ['django_celery_beat']
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
