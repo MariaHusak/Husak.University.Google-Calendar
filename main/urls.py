@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 from main import views
 
 urlpatterns = [
-    path('', views.index, name='home'),  # Use the index view from main app for the homepage
+    path('', views.index, name='home'),
     path('privacy/', views.privacy, name='privacy'),
     path('login/', views.login, name='login'),
     path('calendar/', views.display_calendar, name='calendar'),
@@ -15,10 +15,11 @@ urlpatterns = [
     path('edit_event/<int:event_id>/', views.edit_event, name='edit_event'),
     path('invitations/', views.invitations_page, name='invitations_page'),
     path('respond_invitation/<int:event_id>/', views.respond_invitation, name='respond_invitation'),
+    path('search-events/', views.search_events, name='search_events'),
+    path('search-suggestions/', views.search_suggestions, name='search_suggestions'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
 ]
 
-# Serve static files during development
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

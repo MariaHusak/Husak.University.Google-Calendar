@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from django.http import JsonResponse, HttpResponse
 from .models import Event
 import logging
+from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
@@ -11,6 +12,8 @@ from django.core.exceptions import ValidationError
 from dateutil.relativedelta import relativedelta
 from django.shortcuts import get_object_or_404, redirect
 from .forms import EventForm
+from django.views.decorators.http import require_GET
+from django.urls import reverse
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -204,4 +207,34 @@ def respond_invitation(request, event_id):
 
     return redirect('calendar')
 
+def search_events(request):
+    query = request.GET.get('query', '')
+    matched_events = []
 
+    logger = logging.getLogger(__name__)
+
+    if query:
+        logger.info(f"Search query: {query}")
+
+        matched_events = Event.objects.filter(
+            title__icontains=query
+        ).distinct()
+
+    return render(request, 'main/search.html', {'events': matched_events})
+
+
+def search_suggestions(request):
+    query = request.GET.get('query', '')
+
+    if query:
+        suggestions = Event.objects.filter(title__icontains=query)
+        suggestions_data = [{
+            'title': suggestion.title,
+            'start_time': suggestion.start_time,
+            'end_time': suggestion.end_time,
+            'location': suggestion.location,
+            'description': suggestion.description
+        } for suggestion in suggestions[:10]]  # Limiting to 10 suggestions
+        return JsonResponse(suggestions_data, safe=False)
+    else:
+        return JsonResponse([], safe=False)
