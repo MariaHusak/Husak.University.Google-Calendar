@@ -234,7 +234,7 @@ def search_suggestions(request):
             'end_time': suggestion.end_time,
             'location': suggestion.location,
             'description': suggestion.description
-        } for suggestion in suggestions[:10]]  # Limiting to 10 suggestions
+        } for suggestion in suggestions[:10]]
         return JsonResponse(suggestions_data, safe=False)
     else:
         return JsonResponse([], safe=False)
