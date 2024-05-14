@@ -138,8 +138,55 @@ form button:focus {
     color: white;
     background-color: grey;
 }
+form select[name="category"] {
+    appearance: none;
+    background-color: none;
+    border: 1px solid grey;
+    line-height: 0;
+    font-size: 17px;
+    width: 50%;
+    display: block;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    border-radius: 60px;
+    color: grey;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+}
 
+form select[name="category"]:focus {
+    outline: none;
+    background: #e7e7e7;
+    color: grey;
+    margin-top: 50px;
+}
 
+form select[name="category"]:valid {
+    margin-top: 10px;
+}
+
+form select[name="category"]:focus ~ label {
+    -moz-transform: translate(0, -35px);
+    -ms-transform: translate(0, -35px);
+    -webkit-transform: translate(0, -35px);
+    transform: translate(0, -35px);
+}
+
+form select[name="category"]:valid ~ label {
+    text-transform: uppercase;
+    font-style: italic;
+    -moz-transform: translate(5px, -35px) scale(0.6);
+    -ms-transform: translate(5px, -35px) scale(0.6);
+    -webkit-transform: translate(5px, -35px) scale(0.6);
+    transform: translate(5px, -35px) scale(0.6);
+}
+
+form select[name="category"] option[selected] {
+    background: #e7e7e7;
+    color: grey;
+}
 
 </style>
 {% endblock %}

@@ -31,12 +31,13 @@
                             {% for event in events %}
                                 {% if event.date.day == day %}
                                     <dt>
-                                        <button class="event-button" onclick="toggleEventDetails(this)">{{ event.title }}</button>
+                                        <button class="event-button" onclick="toggleEventDetails(this)" category="{{ event.category }}">{{ event.title }}</button>
                                         <div class="event-details" style="display: none;">
                                             <div class="event-border">
                                                 <strong>Title:</strong> {{ event.title }}<br>
                                                 <strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}<br>
                                                 <strong>Location:</strong> {{ event.location }}<br>
+                                                <strong>Category:</strong> {{ event.category }}<br>
                                                 <strong>Description:</strong> {{ event.description }}<br>
                                                 <strong>Creator:</strong> {{ event.creator_nickname }}<br>
                                                 <strong>Invited Users:</strong> {{ event.invited_users_nicknames|join:", " }}<br>

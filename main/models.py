@@ -21,6 +21,14 @@ class Event(models.Model):
     ]
     event_type = models.CharField(max_length=10, choices=EVENT_TYPE_CHOICES, default='offline')
 
+    CATEGORY_CHOICES = [
+        ('work', 'Work'),
+        ('personal', 'Personal'),
+        ('social', 'Social'),
+        ('holiday', 'Holiday'),
+        ('education', 'Education'),
+    ]
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
 
     description = models.TextField()

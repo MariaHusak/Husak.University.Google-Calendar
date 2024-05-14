@@ -52,14 +52,8 @@ def display_calendar(request, year=None, month=None):
         prev_month = f"{year}/{month - 1:02d}"
 
     user = request.user
-
-    # Fetch events where the user is the creator
     creator_events = Event.objects.filter(date__year=year, date__month=month, creator=user)
-
-    # Fetch events where the user is invited and has accepted the invitation
     invited_events = Event.objects.filter(date__year=year, date__month=month, attendees=user, invited_users=user)
-
-    # Combine both creator and invited events
     all_events = creator_events | invited_events
 
     event_data = []
@@ -71,6 +65,7 @@ def display_calendar(request, year=None, month=None):
             'start_time': event.start_time,
             'end_time': event.end_time,
             'location': event.location,
+            'category': event.category,
             'description': event.description,
             'creator_nickname': event.creator.username,
             'invited_users_nicknames': [user.username for user in event.invited_users.all()]
@@ -93,6 +88,7 @@ def create_event(request):
         event_description = request.POST.get('event_description')
         invited_emails = request.POST.getlist('invited_emails')
         recurrence = request.POST.get('recurrence')
+        event_category = request.POST.get('event_category')
 
         creator = request.user
 
@@ -102,7 +98,7 @@ def create_event(request):
         try:
             event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
                                          end_time=end_time, location=event_location, description=event_description,
-                                         creator=creator, recurrence=recurrence)
+                                         creator=creator, recurrence=recurrence, category=event_category)
             if recurrence:
                 if recurrence == 'daily':
                     delta = relativedelta(days=1)
