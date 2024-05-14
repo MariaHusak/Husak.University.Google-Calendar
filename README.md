@@ -6,6 +6,14 @@ husakmaria74@gmail.com
 
 https://t.me/@gusakmary
 ## Getting Started
+#### To run project locally, follow next steps:
+
+Clone the repository: ``` git clone https://github.com/MariaHusak/Husak.University.Google-Calendar.git ```
+
+Install dependencies: ``` pip install -r requirements.txt ```
+
+Run the development server: ``` python manage.py runserver ```
+
 ### Getting Started with Local Setup for Google Calendar
 Welcome to Google Calendar! This guide will walk you through the process of setting up Google Calendar locally on your computer.
 #### Prerequisites
@@ -281,7 +289,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 2:
 - Implement feature: Calendar View with Monthly Layout ✔️
-- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline 
+- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline  ✔️
 - Write Project Documentation: Architecture Diagram ✔️
 - Write Unit Tests for User Authentication ✔️ 
 - Create Postman collection for testing OAuth endpoints
@@ -295,7 +303,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 4:
 - Implement feature: Reminder Notifications via Email  ✔️ 
-- Implement automated deployment using CI/CD pipeline
+- Implement automated deployment using CI/CD pipeline ✔️
 - Write Project Tasks Decomposition ✔️
 - Write Unit Tests for Reminder Notifications ✔️ 
 - Create Postman collection for testing Reminder endpoints
@@ -336,11 +344,11 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Recurring Events endpoints ✔️
 
 ### Week 10:
-- Implement feature: Search Functionality
-- Conduct user acceptance testing (UAT)
-- Finalize documentation for release
-- Write Unit Tests for Search Functionality
-- Conduct unit testing for Event Editing endpoints
+- Implement feature: Search Functionality ✔️
+- Conduct user acceptance testing (UAT) +-
+- Finalize documentation for release ✔️
+- Write Unit Tests for Search Functionality ✔️
+- Conduct unit testing for Event Editing endpoints ✔️
 
 ### Week 11:
 - Implement feature: Customizable Event Categories
