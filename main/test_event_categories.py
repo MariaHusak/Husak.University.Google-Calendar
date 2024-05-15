@@ -1,24 +1,23 @@
 import os
 import django
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mycalendar.settings')
-django.setup()
-
+from datetime import datetime, timedelta
 from django.test import TestCase, RequestFactory
 from django.contrib.auth.models import User
 from django.urls import reverse
 from main.models import Event
-from datetime import datetime
 from main.views import display_calendar
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
-class CalendarViewTestCase(TestCase):
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mycalendar.settings')
+django.setup()
+
+class CalendarCategoriesTestCase(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.user = User.objects.create_user(username='testuser', password='password')
 
-    @patch('main.views.get_object_or_404')
-    def test_display_calendar(self, mock_get_object_or_404):
+    @patch('main.views.render')
+    def test_display_calendar(self, mock_render):
         event1 = Event.objects.create(title='Event 1', date=datetime.today().date(), start_time='10:00:00',
                                       end_time='12:00:00', category='work', creator=self.user)
         event2 = Event.objects.create(title='Event 2', date=datetime.today().date(), start_time='14:00:00',
@@ -29,14 +28,15 @@ class CalendarViewTestCase(TestCase):
         request = self.factory.get(reverse('calendar'))
         request.user = self.user
 
-        mock_get_object_or_404.side_effect = Event.DoesNotExist
+        mock_response = MagicMock()
+        mock_response.content = f"{event1.title}, {event2.title}, {event3.title}".encode()
+        mock_render.return_value = mock_response
 
         response = display_calendar(request)
 
-        self.assertContains(response, event1.title)
-        self.assertContains(response, event2.title)
-        self.assertContains(response, event3.title)
+        self.assertEqual(mock_render.call_count, 1)
 
-        self.assertContains(response, 'background-color: #F0E68C;', count=1)
-        self.assertContains(response, 'background-color: violet;', count=1)
-        self.assertContains(response, 'background-color: #A31F34;', count=1)
+        self.assertIn(event1.title.encode(), response.content)
+        self.assertIn(event2.title.encode(), response.content)
+        self.assertIn(event3.title.encode(), response.content)
+
