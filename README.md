@@ -352,8 +352,8 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 11:
 - Implement feature: Customizable Event Categories ✔️
-- Prepare for project deployment
-- Conduct final round of testing and bug fixes 
+- Prepare for project deployment ✔️
+- Conduct final round of testing and bug fixes ✔️
 - Write Unit Tests for Customizable Event Categories ✔️
 - Conduct unit testing for Guest RSVP endpoints ✔️
 
