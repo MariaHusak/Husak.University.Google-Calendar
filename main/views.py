@@ -4,14 +4,14 @@ from datetime import datetime, timedelta
 from django.http import JsonResponse, HttpResponse
 from .models import Event
 import logging
-from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
-from dateutil.relativedelta import relativedelta
 from django.shortcuts import get_object_or_404, redirect
 from .forms import EventForm
+from django.utils.dateparse import parse_date
+from dateutil.relativedelta import relativedelta
 from django.views.decorators.http import require_GET
 from django.urls import reverse
 
@@ -76,7 +76,6 @@ def display_calendar(request, year=None, month=None):
                                                   'year_name': year_name, 'next_month': next_month,
                                                   'prev_month': prev_month, 'events': event_data})
 
-
 @login_required
 def create_event(request):
     if request.method == 'POST':
@@ -96,29 +95,34 @@ def create_event(request):
             return JsonResponse({'success': False, 'error': 'Incomplete event data'}, status=400)
 
         try:
-            event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                         end_time=end_time, location=event_location, description=event_description,
-                                         creator=creator, recurrence=recurrence, category=event_category)
-            if recurrence:
-                if recurrence == 'daily':
-                    delta = relativedelta(days=1)
-                elif recurrence == 'weekly':
-                    delta = relativedelta(weeks=1)
-                elif recurrence == 'monthly':
-                    delta = relativedelta(months=1)
-                elif recurrence == 'yearly':
-                    delta = relativedelta(years=1)
-                else:
-                    delta = None
+            event = Event.objects.create(
+                title=event_title, date=event_date, start_time=start_time,
+                end_time=end_time, location=event_location, description=event_description,
+                creator=creator, recurrence=recurrence, category=event_category
+            )
 
-                if delta:
-                    event_date = datetime.strptime(event_date, '%Y-%m-%d').date()
-                    end_date = datetime.today().date() + relativedelta(years=1)
-                    while event_date < end_date:
-                        new_event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                                         end_time=end_time, location=event_location,
-                                                         description=event_description,
-                                                         creator=creator, recurrence=recurrence)
+            if recurrence:
+                if recurrence in ['daily', 'weekly', 'monthly', 'yearly']:
+                    delta = None
+                    if recurrence == 'daily':
+                        delta = relativedelta(days=1)
+                    elif recurrence == 'weekly':
+                        delta = relativedelta(weeks=1)
+                    elif recurrence == 'monthly':
+                        delta = relativedelta(months=1)
+                    elif recurrence == 'yearly':
+                        delta = relativedelta(years=1)
+
+                    if delta:
+                        end_date = parse_date(event_date) + relativedelta(years=1)
+                        current_date = parse_date(event_date) + delta
+                        while current_date <= end_date:
+                            Event.objects.create(
+                                title=event_title, date=current_date, start_time=start_time,
+                                end_time=end_time, location=event_location, description=event_description,
+                                creator=creator, recurrence=recurrence, category=event_category
+                            )
+                            current_date += delta
 
             for email in invited_emails:
                 try:
@@ -149,7 +153,6 @@ def create_event(request):
     else:
         form = EventForm()
         return render(request, 'main/create_event.html', {'form': form})
-
 
 
 @login_required

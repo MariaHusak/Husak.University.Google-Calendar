@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
+from opentelemetry.instrumentation.django import DjangoInstrumentor
+from opentelemetry.instrumentation.logging import LoggingInstrumentor
+from opentelemetry.sdk.resources import Resource
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from opentelemetry import trace
+from azure.monitor.opentelemetry.exporter import AzureMonitorTraceExporter
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -101,6 +108,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'mycalendar.middleware.TracingMiddleware'
 ]
 
 ROOT_URLCONF = 'mycalendar.urls'
@@ -243,3 +251,12 @@ AUTHENTICATION_BACKENDS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+exporter = AzureMonitorTraceExporter(connection_string="InstrumentationKey=5ba07293-a0c1-4ba6-a705-2067166f6e42;IngestionEndpoint=https://northeurope-2.in.applicationinsights.azure.com/;LiveEndpoint=https://northeurope.livediagnostics.monitor.azure.com/;ApplicationId=ebf58740-15a1-447c-9ec7-0eb2faa49e6e")
+
+tracer_provider = TracerProvider(resource=Resource.create({}),)
+tracer_provider.add_span_processor(BatchSpanProcessor(exporter))
+
+DjangoInstrumentor().instrument()
+LoggingInstrumentor().instrument()
+trace.set_tracer_provider(tracer_provider)
