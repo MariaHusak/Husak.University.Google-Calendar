@@ -1,4 +1,3 @@
-from django.shortcuts import render
 import calendar
 from datetime import datetime, timedelta
 from django.http import JsonResponse, HttpResponse
@@ -8,12 +7,15 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from .forms import EventForm
 from django.utils.dateparse import parse_date
 from dateutil.relativedelta import relativedelta
-from django.views.decorators.http import require_GET
-from django.urls import reverse
+from django.conf import settings
+from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.signals import user_logged_in
+from django.dispatch import receiver
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -237,3 +239,13 @@ def search_suggestions(request):
         return JsonResponse(suggestions_data, safe=False)
     else:
         return JsonResponse([], safe=False)
+
+@receiver(user_logged_in)
+def send_welcome_email(sender, user, request, **kwargs):
+        send_mail(
+            'Welcome to Mary Calendar',
+            f'Hello {user.username},\n\nWelcome to Mary Calendar! We are excited to see you. If you have any questions or need assistance, feel free to reach out to our support team.\n\nBest regards,\nThe Team',
+            'husakmaria74@gmail.com',
+            [user.email],
+            fail_silently=False,
+        )
