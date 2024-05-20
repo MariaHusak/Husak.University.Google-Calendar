@@ -358,9 +358,9 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Guest RSVP endpoints ✔️
 
 ### Week 12:
-- Implement feature: Welcome Email
+- Implement feature: Welcome Email ✔️
 - Finalize deployment and release
-- Conduct post-release monitoring and support
+- Conduct post-release monitoring and support ✔️
 - Write Unit Tests for remaining functionalities
-- Write Unit Tests for Welcome Email
+- Write Unit Tests for Welcome Email ✔️
 
