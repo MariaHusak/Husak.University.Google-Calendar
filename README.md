@@ -361,6 +361,6 @@ Document CI/CD processes and best practices for future reference.
 - Implement feature: Welcome Email ✔️
 - Finalize deployment and release
 - Conduct post-release monitoring and support ✔️
-- Write Unit Tests for remaining functionalities
+- Write Unit Tests for remaining functionalities ✔️
 - Write Unit Tests for Welcome Email ✔️
 
