@@ -1,4 +1,3 @@
-from django.shortcuts import render
 import calendar
 from datetime import datetime, timedelta
 from django.http import JsonResponse, HttpResponse
@@ -8,9 +7,15 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.core.exceptions import ValidationError
-from dateutil.relativedelta import relativedelta
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from .forms import EventForm
+from django.utils.dateparse import parse_date
+from dateutil.relativedelta import relativedelta
+from django.conf import settings
+from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.signals import user_logged_in
+from django.dispatch import receiver
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -49,14 +54,8 @@ def display_calendar(request, year=None, month=None):
         prev_month = f"{year}/{month - 1:02d}"
 
     user = request.user
-
-    # Fetch events where the user is the creator
     creator_events = Event.objects.filter(date__year=year, date__month=month, creator=user)
-
-    # Fetch events where the user is invited and has accepted the invitation
     invited_events = Event.objects.filter(date__year=year, date__month=month, attendees=user, invited_users=user)
-
-    # Combine both creator and invited events
     all_events = creator_events | invited_events
 
     event_data = []
@@ -68,6 +67,7 @@ def display_calendar(request, year=None, month=None):
             'start_time': event.start_time,
             'end_time': event.end_time,
             'location': event.location,
+            'category': event.category,
             'description': event.description,
             'creator_nickname': event.creator.username,
             'invited_users_nicknames': [user.username for user in event.invited_users.all()]
@@ -77,7 +77,6 @@ def display_calendar(request, year=None, month=None):
     return render(request, 'main/calendar.html', {'calendar': cal_data, 'month_name': month_name,
                                                   'year_name': year_name, 'next_month': next_month,
                                                   'prev_month': prev_month, 'events': event_data})
-
 
 @login_required
 def create_event(request):
@@ -90,6 +89,7 @@ def create_event(request):
         event_description = request.POST.get('event_description')
         invited_emails = request.POST.getlist('invited_emails')
         recurrence = request.POST.get('recurrence')
+        event_category = request.POST.get('event_category')
 
         creator = request.user
 
@@ -97,29 +97,34 @@ def create_event(request):
             return JsonResponse({'success': False, 'error': 'Incomplete event data'}, status=400)
 
         try:
-            event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                         end_time=end_time, location=event_location, description=event_description,
-                                         creator=creator, recurrence=recurrence)
-            if recurrence:
-                if recurrence == 'daily':
-                    delta = relativedelta(days=1)
-                elif recurrence == 'weekly':
-                    delta = relativedelta(weeks=1)
-                elif recurrence == 'monthly':
-                    delta = relativedelta(months=1)
-                elif recurrence == 'yearly':
-                    delta = relativedelta(years=1)
-                else:
-                    delta = None
+            event = Event.objects.create(
+                title=event_title, date=event_date, start_time=start_time,
+                end_time=end_time, location=event_location, description=event_description,
+                creator=creator, recurrence=recurrence, category=event_category
+            )
 
-                if delta:
-                    event_date = datetime.strptime(event_date, '%Y-%m-%d').date()
-                    end_date = datetime.today().date() + relativedelta(years=1)
-                    while event_date < end_date:
-                        new_event = Event.objects.create(title=event_title, date=event_date, start_time=start_time,
-                                                         end_time=end_time, location=event_location,
-                                                         description=event_description,
-                                                         creator=creator, recurrence=recurrence)
+            if recurrence:
+                if recurrence in ['daily', 'weekly', 'monthly', 'yearly']:
+                    delta = None
+                    if recurrence == 'daily':
+                        delta = relativedelta(days=1)
+                    elif recurrence == 'weekly':
+                        delta = relativedelta(weeks=1)
+                    elif recurrence == 'monthly':
+                        delta = relativedelta(months=1)
+                    elif recurrence == 'yearly':
+                        delta = relativedelta(years=1)
+
+                    if delta:
+                        end_date = parse_date(event_date) + relativedelta(years=1)
+                        current_date = parse_date(event_date) + delta
+                        while current_date <= end_date:
+                            Event.objects.create(
+                                title=event_title, date=current_date, start_time=start_time,
+                                end_time=end_time, location=event_location, description=event_description,
+                                creator=creator, recurrence=recurrence, category=event_category
+                            )
+                            current_date += delta
 
             for email in invited_emails:
                 try:
@@ -150,7 +155,6 @@ def create_event(request):
     else:
         form = EventForm()
         return render(request, 'main/create_event.html', {'form': form})
-
 
 
 @login_required
@@ -204,4 +208,44 @@ def respond_invitation(request, event_id):
 
     return redirect('calendar')
 
+def search_events(request):
+    query = request.GET.get('query', '')
+    matched_events = []
 
+    logger = logging.getLogger(__name__)
+
+    if query:
+        logger.info(f"Search query: {query}")
+
+        matched_events = Event.objects.filter(
+            title__icontains=query
+        ).distinct()
+
+    return render(request, 'main/search.html', {'events': matched_events})
+
+
+def search_suggestions(request):
+    query = request.GET.get('query', '')
+
+    if query:
+        suggestions = Event.objects.filter(title__icontains=query)
+        suggestions_data = [{
+            'title': suggestion.title,
+            'start_time': suggestion.start_time,
+            'end_time': suggestion.end_time,
+            'location': suggestion.location,
+            'description': suggestion.description
+        } for suggestion in suggestions[:10]]
+        return JsonResponse(suggestions_data, safe=False)
+    else:
+        return JsonResponse([], safe=False)
+
+@receiver(user_logged_in)
+def send_welcome_email(sender, user, request, **kwargs):
+        send_mail(
+            'Welcome to Mary Calendar',
+            f'Hello {user.username},\n\nWelcome to Mary Calendar! We are excited to see you. If you have any questions or need assistance, feel free to reach out to our support team.\n\nBest regards,\nThe Team',
+            'husakmaria74@gmail.com',
+            [user.email],
+            fail_silently=False,
+        )

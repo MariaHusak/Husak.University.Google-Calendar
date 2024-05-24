@@ -3,7 +3,6 @@
 }
 
 .event-button {
-    background-color: #D3D3D3;
     border: none;
     color: white;
     padding: 10px 25px;
@@ -14,6 +13,30 @@
     cursor: pointer;
     margin: 4px 2px;
     border-radius: 15px;
+}
+
+.event-button {
+    background-color: #D3D3D3;
+}
+
+.event-button[category="work"] {
+    background-color: #F0E68C;
+}
+
+.event-button[category="personal"] {
+    background-color: violet;
+}
+
+.event-button[category="social"] {
+    background-color: #A31F34;
+}
+
+.event-button[category="holiday"] {
+    background-color: green;
+}
+
+.event-button[category="education"] {
+    background-color: #89CFF0;
 }
 
 .event-border{

@@ -1,4 +1,4 @@
-## Husak.University.Google-Calendar
+## Husak.University.Google-Calendar (Project - 6)
 ## Author
 Mariia Husak FEP-21
 
@@ -6,6 +6,14 @@ husakmaria74@gmail.com
 
 https://t.me/@gusakmary
 ## Getting Started
+#### To run project locally, follow next steps:
+
+Clone the repository: ``` git clone https://github.com/MariaHusak/Husak.University.Google-Calendar.git ```
+
+Install dependencies: ``` pip install -r requirements.txt ```
+
+Run the development server: ``` python manage.py runserver ```
+
 ### Getting Started with Local Setup for Google Calendar
 Welcome to Google Calendar! This guide will walk you through the process of setting up Google Calendar locally on your computer.
 #### Prerequisites
@@ -65,7 +73,7 @@ Welcome to the documentation for project, a comprehensive and user-friendly cale
 ### Architecture Diagram 
 You can see the architecture diagram here:
 
-https://lucid.app/lucidchart/0ff30275-670c-47aa-bb2e-8bbd726d1bc8/edit?invitationId=inv_75e9b6ef-4c50-456e-846e-496b8b10d010&page=0_0#
+https://miro.com/app/board/uXjVKNOG358=/
 ### Infrastructure Diagram
 You can see the infrastructure diagram here:
 
@@ -281,7 +289,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 2:
 - Implement feature: Calendar View with Monthly Layout ✔️
-- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline 
+- Set up Continuous Integration/Continuous Delivery (CI/CD) pipeline  ✔️
 - Write Project Documentation: Architecture Diagram ✔️
 - Write Unit Tests for User Authentication ✔️ 
 - Create Postman collection for testing OAuth endpoints
@@ -295,7 +303,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 4:
 - Implement feature: Reminder Notifications via Email  ✔️ 
-- Implement automated deployment using CI/CD pipeline
+- Implement automated deployment using CI/CD pipeline ✔️
 - Write Project Tasks Decomposition ✔️
 - Write Unit Tests for Reminder Notifications ✔️ 
 - Create Postman collection for testing Reminder endpoints
@@ -329,30 +337,30 @@ Document CI/CD processes and best practices for future reference.
 - Conduct unit testing for Invite Attendees endpoints ✔️
 
 ### Week 9:
-- Implement feature: Sharing Calendars
-- Design UI components for displaying Calendar View
-- Address any outstanding issues in documentation
-- Write Unit Tests for Sharing Calendars
-- Conduct unit testing for Recurring Events endpoints
+- Implement feature: Sharing Calendars ✔️
+- Design UI components for displaying Calendar View ✔️
+- Address any outstanding issues in documentation ✔️
+- Write Unit Tests for Sharing Calendars ✔️
+- Conduct unit testing for Recurring Events endpoints ✔️
 
 ### Week 10:
-- Implement feature: Search Functionality
-- Conduct user acceptance testing (UAT)
-- Finalize documentation for release
-- Write Unit Tests for Search Functionality
-- Conduct unit testing for Event Editing endpoints
+- Implement feature: Search Functionality ✔️
+- Conduct user acceptance testing (UAT) +-
+- Finalize documentation for release ✔️
+- Write Unit Tests for Search Functionality ✔️
+- Conduct unit testing for Event Editing endpoints ✔️
 
 ### Week 11:
-- Implement feature: Customizable Event Categories
-- Prepare for project deployment
-- Conduct final round of testing and bug fixes
-- Write Unit Tests for Customizable Event Categories
-- Conduct unit testing for Guest RSVP endpoints
+- Implement feature: Customizable Event Categories ✔️
+- Prepare for project deployment ✔️
+- Conduct final round of testing and bug fixes ✔️
+- Write Unit Tests for Customizable Event Categories ✔️
+- Conduct unit testing for Guest RSVP endpoints ✔️
 
 ### Week 12:
-- Implement feature: Welcome Email
+- Implement feature: Welcome Email ✔️
 - Finalize deployment and release
-- Conduct post-release monitoring and support
-- Conduct retrospective meeting for project review
-- Write Unit Tests for remaining functionalities
-- Conduct unit testing for Sharing Calendars endpoints
+- Conduct post-release monitoring and support ✔️
+- Write Unit Tests for remaining functionalities ✔️
+- Write Unit Tests for Welcome Email ✔️
+
