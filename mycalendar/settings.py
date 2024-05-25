@@ -70,7 +70,7 @@ DEFAULT_FROM_EMAIL = 'husakmaria74@gmail.com'
 
 
 
-ALLOWED_HOSTS = ['marycalendar.azurewebsites.net', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['marycalendar.azurewebsites.net', 'localhost', '127.0.0.1', '*']
 
 CSRF_TRUSTED_ORIGINS = ['https://marycalendar.azurewebsites.net']
 
