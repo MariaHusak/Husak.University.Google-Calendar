@@ -217,7 +217,11 @@ CELERY_TASK_TIME_LIMIT = 300"""
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 #STATIC_ROOT = BASE_DIR / 'staticfiles'
+=======
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+>>>>>>> e01c0fad9611dbbc7ee4f0180f102987b4ea77ac
 
 
 SITE_ID = 2

@@ -11,6 +11,12 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .forms import EventForm
 from django.utils.dateparse import parse_date
 from dateutil.relativedelta import relativedelta
+<<<<<<< HEAD
+=======
+from django.conf import settings
+from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+>>>>>>> e01c0fad9611dbbc7ee4f0180f102987b4ea77ac
 from django.contrib.auth.signals import user_logged_in
 from django.dispatch import receiver
 

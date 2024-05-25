@@ -359,7 +359,11 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 12:
 - Implement feature: Welcome Email ✔️
+<<<<<<< HEAD
 - Finalize deployment and release ✔️
+=======
+- Finalize deployment and release
+>>>>>>> e01c0fad9611dbbc7ee4f0180f102987b4ea77ac
 - Conduct post-release monitoring and support ✔️
 - Write Unit Tests for remaining functionalities ✔️
 - Write Unit Tests for Welcome Email ✔️
