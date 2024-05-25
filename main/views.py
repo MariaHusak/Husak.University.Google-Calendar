@@ -11,9 +11,6 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .forms import EventForm
 from django.utils.dateparse import parse_date
 from dateutil.relativedelta import relativedelta
-from django.conf import settings
-from django.contrib.auth import login as auth_login, authenticate
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.signals import user_logged_in
 from django.dispatch import receiver
 
@@ -168,6 +165,7 @@ def edit_event(request, event_id):
     else:
         form = EventForm(instance=event)
     return render(request, 'main/edit_event.html', {'form': form, 'event_id': event_id})
+
 
 @login_required
 def invitations_page(request):
