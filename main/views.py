@@ -144,9 +144,10 @@ def create_event(request):
                     logger.error(f'Validation error occurred while sending email to {email}: {str(e)}')
 
             return redirect('calendar')
+        except ValidationError as ve:
+            logger.error(f'Validation error while creating event: {str(ve)}')
+            return JsonResponse({'success': False, 'error': ve.message_dict}, status=400)
         except Exception as e:
-            if event:
-                event.delete()
             logger.error(f'Failed to create event: {str(e)}')
             return JsonResponse({'success': False, 'error': 'Failed to create event'}, status=500)
     else:
