@@ -364,3 +364,9 @@ Document CI/CD processes and best practices for future reference.
 - Write Unit Tests for remaining functionalities ✔️
 - Write Unit Tests for Welcome Email ✔️
 
+## Anti-Lab 2
+- Dmytro Bilyk
+- https://github.com/DmBilyk/Bilyk.University.Online-Meditation-and-Mindfulness-Community
+- https://github.com/DmBilyk/Husak.University.Google-Calendar/pull/1
+
+
