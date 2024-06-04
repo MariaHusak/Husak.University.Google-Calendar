@@ -185,20 +185,6 @@ Deployment to production: Upon successful testing in the staging environment, au
 
 Notifications: Notify stakeholders of deployment status and any issues encountered during the deployment process.
 
-#### 5. Tools and Technologies:
-The following tools and technologies are commonly used in our CI/CD process:
-
-Version Control: Git
-
-CI/CD Pipeline: Jenkins, GitLab CI/CD, Travis CI
-
-Automated Testing: JUnit, Selenium, Jest, pytest
-
-Artifact Repository: Nexus, Artifactory
-
-Deployment Tools: Ansible, Docker, Kubernetes
-
-Monitoring: Prometheus, Grafana
 
 ### Feedback
 We value your feedback and strive to continuously improve Google Calendar. If you have any suggestions, feature requests, or bug reports, please don't hesitate to reach out to us. Your input helps us make Google Calendar better for everyone.
@@ -279,6 +265,22 @@ Write project documentation including setup instructions, API documentation, and
 Create architecture diagrams and infrastructure diagrams for better understanding of system components.
 
 Document CI/CD processes and best practices for future reference.
+
+### List of Application Features:
+
+• User authentication: Users can authenticate with Google Account (OAuth 2.0) 
+• Event Creation: Users can easily create events by specifying details such as title, date, time, location, and description.
+• Calendar View: Provides an intuitive interface for users to view their events in a monthly, weekly, or daily layout.
+• Reminder Notifications: Sends timely reminders to users via email or in-app notifications to ensure they don't miss important events.
+• Invite Attendees: Allows users to invite others to events by entering their email addresses, enabling seamless collaboration and coordination.
+• Recurring Events: Supports the creation of recurring events with customizable recurrence patterns such as daily, weekly, monthly, or yearly.
+• Event Editing: Enables users to modify event details, such as changing the date, time, or location, even after the event has been created.
+• Guest RSVP: Allows invited guests to RSVP to events, providing the organizer with visibility into attendees' responses.
+• Sharing Calendars: Enables users to share their calendars with others, granting them view or edit permissions, fostering collaboration.
+• Search Functionality: Provides a search feature for users to quickly find events by keywords, titles, or dates.
+• Customizable Event Categories: Allows users to categorize events into different groups (e.g., work, personal, social) for better organization and filtering.
+• Welcome Email: Sends a personalized welcome email to users upon successful registration or first sign-in via their Google Account.
+
 
 ### Week 1:
 - Implement feature: User authentication with Google Account (OAuth 2.0) ✔️
