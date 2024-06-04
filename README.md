@@ -269,16 +269,27 @@ Document CI/CD processes and best practices for future reference.
 ### List of Application Features:
 
 • User authentication: Users can authenticate with Google Account (OAuth 2.0) 
+
 • Event Creation: Users can easily create events by specifying details such as title, date, time, location, and description.
+
 • Calendar View: Provides an intuitive interface for users to view their events in a monthly, weekly, or daily layout.
+
 • Reminder Notifications: Sends timely reminders to users via email or in-app notifications to ensure they don't miss important events.
+
 • Invite Attendees: Allows users to invite others to events by entering their email addresses, enabling seamless collaboration and coordination.
+
 • Recurring Events: Supports the creation of recurring events with customizable recurrence patterns such as daily, weekly, monthly, or yearly.
+
 • Event Editing: Enables users to modify event details, such as changing the date, time, or location, even after the event has been created.
+
 • Guest RSVP: Allows invited guests to RSVP to events, providing the organizer with visibility into attendees' responses.
+
 • Sharing Calendars: Enables users to share their calendars with others, granting them view or edit permissions, fostering collaboration.
+
 • Search Functionality: Provides a search feature for users to quickly find events by keywords, titles, or dates.
+
 • Customizable Event Categories: Allows users to categorize events into different groups (e.g., work, personal, social) for better organization and filtering.
+
 • Welcome Email: Sends a personalized welcome email to users upon successful registration or first sign-in via their Google Account.
 
 
@@ -298,7 +309,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 3:
 - Implement feature: Event Creation functionality ✔️ 
-- Configure Azure deployment settings
+- Configure Azure deployment settings ✔️
 - Write Project Documentation: Infrastructure Diagram ✔️ 
 - Write Unit Tests for Event Creation functionality ✔️ 
 - Write documentation for Azure deployment process ✔️ 
@@ -312,14 +323,14 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 5:
 - Implement feature: Invite Attendees to Events ✔️
-- Optimize Azure deployment for performance
+- Optimize Azure deployment for performance ✔️
 - Write documentation for CI/CD process ✔️
 - Write Unit Tests for Invite Attendees functionality ✔️
 - Conduct unit testing for OAuth endpoints ✔️
 
 ### Week 6:
 - Implement feature: Recurring Events ✔️
-- Perform load testing on Azure deployment
+- Perform load testing on Azure deployment ✔️
 - Update Project Documentation based on feedback ✔️
 - Write Unit Tests for Recurring Events ✔️
 - Conduct unit testing for Event Creation endpoints ✔️
@@ -347,7 +358,7 @@ Document CI/CD processes and best practices for future reference.
 
 ### Week 10:
 - Implement feature: Search Functionality ✔️
-- Conduct user acceptance testing (UAT) +-
+- Conduct user acceptance testing (UAT) 
 - Finalize documentation for release ✔️
 - Write Unit Tests for Search Functionality ✔️
 - Conduct unit testing for Event Editing endpoints ✔️
