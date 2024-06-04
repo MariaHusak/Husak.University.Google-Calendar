@@ -207,6 +207,7 @@ def respond_invitation(request, event_id):
 
     return redirect('calendar')
 
+@login_required
 def search_events(request):
     query = request.GET.get('query', '')
     matched_events = []
@@ -217,19 +218,21 @@ def search_events(request):
         logger.info(f"Search query: {query}")
 
         matched_events = Event.objects.filter(
-            title__icontains=query
+            title__icontains=query,
+            creator=request.user
         ).distinct()
 
     return render(request, 'main/search.html', {'events': matched_events})
 
-
+@login_required
 def search_suggestions(request):
     query = request.GET.get('query', '')
 
     if query:
-        suggestions = Event.objects.filter(title__icontains=query)
+        suggestions = Event.objects.filter(title__icontains=query, creator=request.user)
         suggestions_data = [{
             'title': suggestion.title,
+            'date': suggestion.date,
             'start_time': suggestion.start_time,
             'end_time': suggestion.end_time,
             'location': suggestion.location,
@@ -238,6 +241,7 @@ def search_suggestions(request):
         return JsonResponse(suggestions_data, safe=False)
     else:
         return JsonResponse([], safe=False)
+
 
 @receiver(user_logged_in)
 def send_welcome_email(sender, user, request, **kwargs):
