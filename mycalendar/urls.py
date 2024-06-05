@@ -42,5 +42,6 @@ urlpatterns = [
     path('delete_sharing_request/<int:request_id>/', views.delete_sharing_request, name='delete_sharing_request'),
 ]
 
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
