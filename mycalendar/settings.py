@@ -137,29 +137,12 @@ WSGI_APPLICATION = 'mycalendar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-import environ
-import sys
-
-environ.Env.DB_SCHEMES['mssql'] = 'mssql'
-env = environ.Env(DEBUG=(bool,False))
-DEFAULT_DATABASE_URL = 'mssql://mariia:samsungA6.@mycalendar.database.windows.net/mariiacalendar?driver=ODBC+Driver+17+for+SQL+Server'
-
-DATABASE_URL = os.environ.get('DATABASE_URL', DEFAULT_DATABASE_URL)
-os.environ['DJANGO_DATABASE_URL'] = DATABASE_URL.format(**os.environ)
-
-if 'test' in sys.argv:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': ':memory:',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': env.db('DJANGO_DATABASE_URL', default=DEFAULT_DATABASE_URL)
-    }
-
-
+}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
