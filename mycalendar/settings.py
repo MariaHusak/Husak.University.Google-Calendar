@@ -142,7 +142,7 @@ import sys
 
 environ.Env.DB_SCHEMES['mssql'] = 'mssql'
 env = environ.Env(DEBUG=(bool,False))
-DEFAULT_DATABASE_URL = 'mssql://mariia:samsungA6.@mycalendar.database.windows.net/mycalendar?driver=ODBC+Driver+17+for+SQL+Server'
+DEFAULT_DATABASE_URL = 'mssql://mariia:samsungA6.@mycalendar.database.windows.net/mariiacalendar?driver=ODBC+Driver+17+for+SQL+Server'
 
 DATABASE_URL = os.environ.get('DATABASE_URL', DEFAULT_DATABASE_URL)
 os.environ['DJANGO_DATABASE_URL'] = DATABASE_URL.format(**os.environ)
